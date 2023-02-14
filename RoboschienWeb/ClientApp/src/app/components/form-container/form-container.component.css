@@ -1,0 +1,325 @@
+/* .mat-datepicker-toggle {
+    background: url("../../../assets/img/calendarxhdpi.png") no-repeat !important;
+} */
+
+@font-face {
+  font-family: 'boschsans_regular';
+  src: url('../../../assets/fonts/boschsans_regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'boschsans_light';
+  src: url('../../../assets/fonts/boschsans_light.woff2') format('woff2'), url('../../../assets/fonts/boschsans_light.woff') format('woff');
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  font-family: 'boschsans_regular' !important;
+}
+
+.font {
+  font-family: 'boschsans_regular' !important;
+}
+
+.font-header {
+  font-family: 'boschsans_light',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-size: 24px;
+}
+
+.font-paragraph {
+  font-family: 'boschsans_regular' !important;
+  font-size: 18px;
+}
+b {
+  font-weight: bold;
+}
+
+.mat-step-text-label {
+  font-family: 'boschsans_regular' !important;
+}
+
+#folderIcon {
+  background-image: url('../../../assets/img/uploadxhdpi.png') no-repeat !important;
+}
+
+.mat-horizontal-stepper-header {
+  pointer-events: none !important;
+}
+
+.fileContainer {
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  border: 2px solid #005691;
+  color: #005691;
+  font-size: 18px;
+  padding: 9px 0 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+  .fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+  }
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none !important;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.field-width {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%
+}
+
+mat-form-field {
+  min-width: 250px;
+}
+
+.position_absolute {
+  position: absolute;
+  left: 0px;
+}
+
+@media only screen and (max-width: 500px) {
+  mat-horizontal-stepper {
+    max-width: 100% !important;
+    margin: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  mat-form-field {
+    min-width: 0px !important;
+  }
+}
+
+
+
+.mat-radio-button {
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mat-radio-label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.mat-radio-container {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+mat-radio-button .mat-radio-button .mat-radio-label .mat-radio-container .mat-radio-outer-circle {
+  box-sizing: border-box;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: border-color ease 280ms;
+  width: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0% !important;
+}
+
+mat-radio-button .mat-radio-button .mat-radio-label .mat-radio-container .mat-radio-inner-circle {
+  border-radius: 0% !important;
+  box-sizing: border-box;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform ease 280ms,background-color ease 280ms;
+  width: 20px;
+  transform: scale(.001);
+}
+
+.mat-radio-ripple {
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.mat-radio-label-content {
+  display: inline-block;
+  order: 0;
+  line-height: inherit;
+  padding-left: 8px;
+  padding-right: 0;
+}
+
+.effect-16 {
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+  .effect-16 ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4caf50;
+    transition: 0.4s;
+  }
+
+  .effect-16:focus ~ .focus-border,
+  .has-content.effect-16 ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+  }
+
+  .effect-16 ~ label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 9px;
+    color: #aaa;
+    transition: 0.3s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+  }
+
+  .effect-16:focus ~ label, .has-content.effect-16 ~ label {
+    top: -16px;
+    font-size: 12px;
+    color: #4caf50;
+    transition: 0.3s;
+  }
+
+form-style-1 {
+  margin: 10px auto;
+  max-width: 400px;
+  padding: 20px 12px 10px 20px;
+  font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+.form-style-1 li {
+  padding: 0;
+  display: block;
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+
+.form-style-1 label {
+  margin: 0 0 3px 0;
+  padding: 0px;
+  display: block;
+  font-weight: bold;
+}
+
+.form-style-1 input[type=text] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-bottom: 1px solid #BEBEBE;
+  padding: 7px;
+  margin: 0px;
+  outline: none;
+}
+
+  .form-style-1 input[type=text]:focus {
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border-bottom: 1px solid #88D5E9;
+  }
+
+/* .mat-datepicker-toggle {
+    background: url("../../../assets/images/icons/calendar_bosch.png") no-repeat !important;
+} */
+
+input:invalid {
+  outline: none !important;
+}
+.mat-step-header .cdk-progrm-focused {
+  background-color: white !important;
+}
+@-moz-document url-prefix() {
+  .mat-step-header .cdk-progrm-focused {
+    background-color: red !important;
+  }
+}
+.center-align {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.block {
+  width: 100px;
+  height: 100px;
+}
+.astric{
+  color:red;
+}
+.mat-horizontal-stepper-header {
+  padding: 0 8px 0 16px !important;
+}
+.mat-step-header .mat-step-icon {
+  background-color: lightgrey;
+}
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before, .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::before {
+  width: calc(57% - 20px) !important;
+}
+
+.check-box-error-color{
+  color:orange;
+}
+
+/*New css*/
+.M-IllnessTypes .mat-form-field .mat-form-field-wrapper .mat-form-field-underline {
+  height: 0px;
+}
+
+
+/deep/ .mat-select-value {
+  color: black;
+  font-weight: 400;
+} 
+
+.text-bold{
+   font-weight:bold;
+}
+
+.boxhead a {
+  font-family: 'boschsans_regular' !important;
+  color: #000000;
+  text-decoration: none;
+}
+ 

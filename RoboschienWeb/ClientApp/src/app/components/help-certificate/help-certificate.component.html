@@ -1,0 +1,135 @@
+<!--PO-->
+<div *ngIf="utilityService.selectedCountry=='portugal' && selectedlanguage=='po'">
+
+  <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+    <mat-dialog-content>
+      <a href=""></a>
+      <div class="help_image">
+        <img src="/assets/images/Sick-Leave-Document-PO.png" alt="image" style="">
+      </div>
+
+      <p style="margin-top:10px;">
+        <b class="font-weight-bold">
+          Para garantir que o documento é elegível, por favor selecione uma foto idêntica à do exemplo
+        </b>
+      </p>
+
+
+    </mat-dialog-content>
+
+  </div>
+
+</div>
+
+<!--PO-EN-->
+
+<div *ngIf="utilityService.selectedCountry=='portugal' && selectedlanguage!='po'">
+
+  <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+    <mat-dialog-content>
+      <a href=""></a>
+      <div class="help_image">
+        <img src="/assets/images/Sick-Leave-Document-PO.png" alt="image" style="">
+      </div>
+
+      <p style="margin-top:10px;">
+        <b class="font-weight-bold">
+          To ensure that the certificate is readable, please select a photo in portrait format.
+        </b>
+      </p>
+
+
+    </mat-dialog-content>
+
+  </div>
+
+</div>
+
+<div *ngIf="utilityService.selectedCountry=='france' && selectedlanguage=='fr'">
+
+  <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+    <mat-dialog-content>
+      <a href=""></a>
+      <img src="/assets/images/France-Ocr-Help.png" alt="image">
+
+      <p style="margin-top:10px;">
+        <b class="font-weight-bold">
+          Pour garantir l'éligibilité du document, veuillez sélectionner une photo identique à l'exemple ci-dessus
+        </b>
+      </p>
+
+
+    </mat-dialog-content>
+
+  </div>
+
+</div>
+
+
+<div *ngIf="utilityService.selectedCountry=='france' && selectedlanguage!='fr'">
+
+  <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+    <mat-dialog-content>
+      <a href=""></a>
+      <img src="/assets/images/France-Ocr-Help.png" alt="image">
+
+      <p style="margin-top:10px;">
+        <b class="font-weight-bold">
+          To ensure that the certificate is readable, please select a photo in portrait format.
+        </b>
+      </p>
+
+
+    </mat-dialog-content>
+
+  </div>
+
+</div>
+
+
+<!--Spain Content-->
+<div *ngIf="utilityService.selectedCountry=='spain' && selectedlanguage=='es'">
+
+  <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+    <mat-dialog-content>
+      <a href=""></a>
+      <img src="/assets/images/Spain-Ocr-Help.png" alt="image">
+
+      <p style="margin-top:10px;">
+        <b class="font-weight-bold">
+          Para asegurarse de que el parte médico de incapacidad temporal es legible, seleccione una foto en formato vertical.
+        </b>
+      </p>
+
+
+    </mat-dialog-content>
+
+  </div>
+
+</div>
+
+
+<div *ngIf="utilityService.selectedCountry=='spain' && selectedlanguage!='es'">
+
+  <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+    <mat-dialog-content>
+      <a href=""></a>
+      <img src="/assets/images/Spain-Ocr-Help.png" alt="image">
+
+      <p style="margin-top:10px;">
+        <b class="font-weight-bold">
+          To ensure that the certificate is readable, please select a photo in portrait format.
+        </b>
+      </p>
+
+
+    </mat-dialog-content>
+
+  </div>
+
+</div>
+
+<div mat-dialog-actions fxLayout="row wrap" fxLayoutAlign="center">
+  <button mat-raised-button color="primary" mat-button (click)="onOkClick()">Ok</button>
+
+</div>

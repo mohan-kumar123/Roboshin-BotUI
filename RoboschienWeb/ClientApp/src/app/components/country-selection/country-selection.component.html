@@ -1,0 +1,31 @@
+<div class="font">
+  <h4>{{'resources.select_country'|translate}}</h4>
+
+  <h5>{{'resources.please_select_country'|translate}}</h5>
+  <br />
+  <!--[checked]="paymentMode.checked == 'true'"-->
+  <!--[(ngModel)]="france.value"-->
+  <!--[checked]="true"-->
+  <!--<input type="radio" value="germany" name="country" (change)="onItemChange($event.target.value)" class="font" />
+  <b> {{'resources.germany'|translate}}</b>
+  <br /><br />-->
+  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>Germany Employees please select this country only</p>-->
+  <input type="radio" value="france" name="country" (change)="onItemChange($event.target.value)" /> <b> {{'resources.france'|translate}}</b>
+  <br /><br />
+  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>France Employees please select this country only</p>-->
+  <input type="radio" value="portugal" name="country" (change)="onItemChange($event.target.value)" /><b> {{'resources.portugal'|translate}}</b>
+  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>Portugal Employees please select this country only</p>-->
+  <br /><br />
+  <input type="radio" value="spain" name="country" (change)="onItemChange($event.target.value)" /><b> {{'resources.spain'|translate}}</b>
+  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>Spain Employees please select this country only</p>-->
+
+
+
+</div>
+
+<br />
+<div mat-dialog-actions fxLayout="row wrap" fxLayoutAlign="center">
+  <button mat-raised-button color="primary" mat-button (click)="onOkClick()" [disabled]="!countrySelected">{{'resources.continue_button'|translate}}</button>
+  <!--<button mat-raised-button color="primary" mat-button (click)="onCancel()" >{{'resources.cancel'|translate}}</button>-->
+
+</div>

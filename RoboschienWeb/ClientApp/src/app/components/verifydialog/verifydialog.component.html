@@ -1,0 +1,15 @@
+
+<div mat-dialog-content>
+  <div fxLayout="row wrap" fxLayoutGap="25px" fxLayoutAlign="center">
+      <mat-spinner></mat-spinner>            
+      <mat-label style="padding-top:2%;padding-left: 12%;">Verifying...</mat-label>
+    </div>
+
+  <div *ngIf="responseData.IsSuccess">
+      {{responseData.Message}}
+  </div>
+</div>
+
+<div mat-dialog-actions *ngIf="responseData.IsSuccess">  
+  <button mat-button  cdkFocusInitial (click)="onCloseClick()">{{'resources.close'|translate}}</button>
+</div>

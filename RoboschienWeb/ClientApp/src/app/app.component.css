@@ -1,0 +1,13 @@
+
+@font-face {
+  font-family: 'boschsans_regular';
+  src: url('../assets/fonts/boschsans_regular.woff') format('woff');
+}
+body{
+    font-family: 'boschsans_regular' !important;
+}
+.footer-fixed {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}

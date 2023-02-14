@@ -1,0 +1,272 @@
+$form-field-input-height: $form-element-height;
+$form-field-margin-bottom: 1rem;
+$form-field-input-horizontal-padding: $grid-gutter-width / 2;
+$form-field-validation-padding-top: .5rem;
+$form-field-validation-text-margin-top: 20px;
+$form-field-validation-text-margin-left: $grid-gutter-width / 2;
+// This are not a magical numbers, they have a reason:
+// They makes their height the same height as their font.
+// This way we can correctly calculate the vertical offset
+// for the translation
+$form-field-label-vertical-space: 1em;
+$form-field-label-text-required-asterisk-padding-left: 2px;
+$form-field-validation-message-vertical-space: .75em;
+
+//
+// Typography
+// ==========================================================================
+$form-field-validation-text-font-size: map-get($font-sizes, smallest);
+$form-field-validation-text-font-weight: map-get($font-weights, bold);
+$form-field-validation-text-line-height: 1.125rem;
+$form-field-label-font-weight: map-get($font-weights, bold);
+
+//
+// Colors
+// ==========================================================================
+$form-field-border-color: $component-divider-color;
+$form-field-label-color--focus: $color-gray-mine-shaft;
+$form-field-label-color--inactive: $component-text-inactive;
+$form-field-background-color: $component-background-color--active;
+$form-field-validation-success-color: $color-green-lima;
+$form-field-validation-error-color: $color-red-monza;
+
+$input-element-color--inverted: $color-white-paper-white;
+
+//
+// Spacing
+// ==========================================================================
+
+$drop-down-horizontal-padding: $grid-gutter-width / 2;
+$drop-down-arrow-top: calc(#{($form-field-input-height / 2) - (21 / 2)} + #{$form-field-label-vertical-space});
+$drop-down-text-padding-bottom: 4px;
+
+//
+// Transition durations
+// ==========================================================================
+$drop-down-arrow-transition-duration: $transition-duration-s;
+
+//
+// Colors
+// ==========================================================================
+$drop-down-color: $font-color-base;
+$drop-down-color-inactive: $form-field-label-color--inactive;
+$drop-down-color--focus: $font-color-base;
+
+$textarea-field-padding-vertical: 12px;
+
+rb-form-input,
+rb-form-textarea,
+rb-form-select,
+rb-form-file,
+rb-form-multi-select,
+.rb-custom-input {
+  display: block;
+  margin-bottom: $form-field-margin-bottom;
+
+  .input-wrapper {
+    position: relative;
+
+    .input, .textarea, .select, .rb-select-btn {
+      border: 0;
+      outline: 0;
+      background: transparent;
+      padding: 0 $form-field-input-horizontal-padding;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 0;
+      border-bottom: 1px solid $form-field-border-color;
+      position: relative;
+      z-index: 2;
+      font-size: inherit;
+      font-family: inherit;
+      text-align: left;
+
+      border-bottom: 1px solid $form-field-border-color;
+      min-height: $form-field-input-height;
+      left: 0;
+      margin-left: 0;
+      margin-top: $form-field-label-vertical-space;
+
+    }
+
+    .rb-file-btn {
+      margin-left: 0;
+      margin-top: $form-field-label-vertical-space;
+      z-index: 2;
+    }
+
+    .select {
+      padding-bottom: $drop-down-text-padding-bottom;
+      padding-right: 3em;
+      appearance: none;
+      height: $form-field-input-height;
+      option {
+        line-height: inherit;
+        font-size: inherit;
+      }
+      &::-ms-expand {
+        display: none;
+      }
+      &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $drop-down-color;
+      }
+
+      &:focus {
+        &::-ms-value {
+          background: transparent;
+          color: $drop-down-color--focus;
+        }
+      }
+    }
+
+    .rb-select-btn {
+      padding-right: 3em;
+    }
+
+    .textarea {
+      height: auto;
+      min-height: 10em;
+      padding-bottom: $textarea-field-padding-vertical;
+      padding-top: $textarea-field-padding-vertical;
+      vertical-align: top;
+    }
+
+    .label {
+      color: $form-field-label-color--inactive;
+      position: absolute;
+      top: 0;
+      left: $form-field-label-vertical-space;
+      transform-origin: 0 0;
+      transform: translateY($form-field-input-height / 2) translateY($form-field-label-vertical-space - (1em / 2));
+      transition: all $transition-duration-s $ease-in-out-quint;
+      white-space: nowrap;
+      height: $form-field-label-vertical-space;
+      line-height: $form-field-label-vertical-space;
+      z-index: 3;
+    }
+
+    // when there is a focus, move the label up and color it
+    .input:focus ~ .label,
+    .textarea:focus ~ .label,
+    .select:focus ~ .select-label,
+    .rb-select-btn:focus ~ .label {
+      color: $form-field-label-color--focus;
+      font-weight: $form-field-label-font-weight;
+      transform: translateY(0) scale(.7);
+    }
+
+    .input-background {
+      bottom: 0;
+      display: block;
+      height: calc(100% - #{$form-field-label-vertical-space});
+      left: 0;
+      position: absolute;
+      z-index: 1;
+
+      @include expand-from-bottom($color: $form-field-background-color);
+    }
+
+    // when there is a focus, move up the background
+    .input:focus ~ .input-background,
+    .select:focus ~ .input-background,
+    .rb-select-btn:focus ~ .input-background,
+    .textarea:focus ~ .input-background {
+      @include expanding-from-bottom--active();
+    }
+
+    .select-icon {
+      position: absolute;
+      z-index: 3;
+      right: $drop-down-horizontal-padding;
+      top: $drop-down-arrow-top;
+      display: inline-block;
+      transition: transform $ease-in-out-quint $drop-down-arrow-transition-duration;
+      pointer-events: none;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+  }
+
+  // Move the label up, when the value is not empty
+  &.not-empty {
+    .label,
+    .select-label {
+      font-weight: $form-field-label-font-weight;
+      transform: translateY(0) scale(.7);
+    }
+  }
+
+  &.white {
+    .input-wrapper {
+      .input, .textarea, .select, .rb-select-btn {
+        background: $color-white-paper-white;
+      }
+    }
+  }
+
+  &.static {
+    margin-bottom: 0;
+    .input-wrapper {
+      .input, .textarea, .select, .rb-select-btn {
+        margin-top: 0;
+        background: $color-white-paper-white;
+      }
+
+      .label {
+        margin-bottom: 0;
+        transform: translateY($form-field-input-height / 2) translateY(- (1em / 2));
+      }
+      .select-icon {
+        top: calc(#{($form-field-input-height / 3) - ($icon-size--arrow-down-thin-height / 2)});
+      }
+    }
+    &.not-empty .label,
+    .input:focus ~ .label,
+    .textarea:focus ~ .label,
+    .select-label,
+    .rb-select-label {
+      display: none;
+    }
+  }
+
+  &:required .input {
+    box-shadow: none;
+  }
+
+  &.ng-dirty:not(.no-validation) {
+    &.ng-valid .input {
+      border-bottom-color: $form-field-validation-success-color;
+    }
+    &.ng-invalid .input {
+      border-bottom-color: $form-field-validation-error-color;
+    }
+  }
+
+  .dropdown-limited {
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: visible
+  }
+
+}
+
+rb-form-errors .error-messages {
+  margin-bottom: $form-field-margin-bottom;
+  font-size: $form-field-validation-text-font-size;
+  font-weight: $form-field-validation-text-font-weight;
+  line-height: $form-field-validation-text-line-height;
+  margin-left: $form-field-validation-text-margin-left;
+  color: $form-field-validation-error-color;
+}
+
+rb-form-errors .error-messages div:first-child {
+  padding-top: $form-field-validation-padding-top;
+}
+
+.list-item-input .input-wrapper {
+  margin: 0 $default-spacing;
+}

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'boschsans_light';
+  src: url('../../../assets/fonts/boschsans_light.woff2') format('woff2'), url('../../../assets/fonts/boschsans_light.woff') format('woff');
+}
+
+p {
+  font-family: 'boschsans_regular' !important;
+  font-size: 1rem;
+}
+
+.font-header {
+  font-family: 'boschsans_light',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-size: 24px;
+}
+
+b {
+  font-weight: bold;
+}
+
+.font {
+  font-family: 'boschsans_regular' !important;
+}
+
+

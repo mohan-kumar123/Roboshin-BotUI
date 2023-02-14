@@ -1,0 +1,917 @@
+
+<mat-horizontal-stepper style="pointer-events: none !important; margin-top: -25px !important;" labelPosition="bottom" #stepper>
+  <ng-template matStepperIcon="edit">
+    <mat-icon>done</mat-icon>
+  </ng-template>
+  <mat-step label="{{'resources.welcome'|translate}}">
+
+    <form [formGroup]="employeeForm" id="welcomeForm" style="pointer-events: initial !important">
+
+
+      <mat-card class="blockStyle">
+
+        <mat-card-header>
+          <mat-card-title>
+
+            <section class="mat-typography">
+              <h1 class="font-header">{{'resources.associate_header'|translate}}</h1>
+            </section>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="margin-left: 8px;margin-top:15px;">
+          <div fxLayout="row">
+            <div class="center-align">
+              <div>
+                <mat-form-field [hideRequiredMarker]="hideMarker" [floatLabel]="'always'">
+                  <mat-label>{{'resources.edit_text_employee_number_title'|translate}}</mat-label>
+                  <input type="text" matInput fmpInputRestrictionDirective="noSpecialChars"
+                         formControlName="employeeNumber" [errorStateMatcher]="matcher"
+                         class="font">
+
+                  <mat-error *ngIf="employeeForm.get('employeeNumber').hasError('minlength') && !employeeForm.get('employeeNumber').hasError('pattern') && !employeeForm.get('employeeNumber').hasError('required')"
+                             class="font">
+                    {{'resources.validate_associate_number'|translate}}
+                  </mat-error>
+                  <mat-error *ngIf="employeeForm.get('employeeNumber').hasError('maxlength') && !employeeForm.get('employeeNumber').hasError('pattern') && !employeeForm.get('employeeNumber').hasError('required')"
+                             class="font">
+                    {{'resources.associate_number_error'|translate}}
+                  </mat-error>
+
+                  <mat-error *ngIf="employeeForm.touched && employeeForm.get('employeeNumber').hasError('required')" class="font">
+                    {{'resources.validate_fields'|translate}}
+                  </mat-error>
+
+                  <mat-error *ngIf="employeeForm.get('employeeNumber').hasError('pattern')" class="font">
+                    {{'resources.associate_number_error'|translate}}
+                  </mat-error>
+
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field [hideRequiredMarker]="hideMarker" [floatLabel]="'always'">
+                  <mat-label>{{'resources.edit_text_employee_first_name_hint'|translate}}</mat-label>
+
+                  <input type="text" matInput fmpInputRestrictionDirective="noSpecialChars" style="font-family: 'boschsans_regular !important;'"
+                         formControlName="employeeFirstName" [errorStateMatcher]="matcher" class="font">
+
+                  <mat-error *ngIf="employeeForm.touched && employeeForm.get('employeeFirstName').hasError('required')" class="font">
+                    {{'resources.validate_fields'|translate}}
+                  </mat-error>
+
+                  <mat-error class="font" *ngIf="employeeForm.get('employeeFirstName').hasError('pattern') && !employeeForm.get('employeeFirstName').hasError('required')">
+                    Please enter a valid
+                    <strong>first name</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field [hideRequiredMarker]="hideMarker" [floatLabel]="'always'">
+                  <mat-label>{{'resources.edit_text_employee_last_name_hint'|translate}}</mat-label>
+
+                  <input class="font" matInput fmpInputRestrictionDirective="noSpecialChars" formControlName="employeeLastName" [errorStateMatcher]="matcher">
+
+                  <mat-error class="font" *ngIf="employeeForm.touched && employeeForm.get('employeeLastName').hasError('required')">
+                    {{'resources.validate_fields'|translate}}
+                  </mat-error>
+
+                  <mat-error class="font" *ngIf="employeeForm.get('employeeLastName').hasError('pattern') && !employeeForm.get('employeeLastName').hasError('required')">
+                    Please enter a valid
+                    <strong>Last name</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+
+          <!--<div *ngIf="utilityService.selectedCountry=='spain'" fxLayout="row" class="font">-->
+            <div  fxLayout="row" class="font">
+              <p>{{'resources.spain_employee_related_info'|translate}}</p>
+            </div>
+</mat-card-content>
+
+      </mat-card>
+
+      <!-- Associate FirstName, LastName Input Area End -->
+      <!-- Mobile no start -->
+
+      <mat-card class="blockStyle">
+        <div *ngIf="utilityService.selectedLang=='en' && utilityService.selectedCountry=='spain'" fxLayout="row" class="font-paragraph" style="font-family: 'boschsans_regular';">
+
+          {{'resources.information_optional_spain'|translate}}
+        </div>
+
+        <div *ngIf="utilityService.selectedLang=='en' && utilityService.selectedCountry=='france'" fxLayout="row" class="font-paragraph" style="font-family: 'boschsans_regular';">
+
+          {{'resources.information_optional_france'|translate}}
+        </div>
+
+        <div *ngIf="utilityService.selectedLang=='en' && utilityService.selectedCountry=='portugal'" fxLayout="row" class="font-paragraph" style="font-family: 'boschsans_regular';">
+
+          {{'resources.information_optional_portugal'|translate}}
+        </div>
+
+        <div *ngIf="utilityService.selectedLang!='en'"
+             fxLayout="row" class="font-paragraph" style="font-family: 'boschsans_regular';">
+          {{'resources.information_optional'|translate}}
+        </div>
+
+
+        <br><br>
+        <div fxLayout="row">
+          <div class="center-align">
+            <div>
+              <mat-form-field [floatLabel]="'always'">
+                <mat-label>{{'resources.edit_text_employee_email_id_title'|translate}}</mat-label>
+                <input class="font" matInput formControlName="email" fmpInputRestrictionDirective="restrictHTMLescapecases" [errorStateMatcher]="matcher"
+                       (input)="validateEmailBox($event.target.value)">
+                <mat-hint *ngIf="!IsEmailHint">{{'resources.validate_optional_field'|translate}}</mat-hint>
+                <mat-error class="font" *ngIf="employeeForm.get('email').hasError('email')">
+                  {{'resources.edit_text_employee_email_id_alert'|translate}}
+                </mat-error>
+
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field [floatLabel]="'always'">
+                <mat-label>{{'resources.edit_text_employee_mobile_number_title'|translate}}</mat-label>
+
+                <input class="font" type="text" matInput fmpInputRestrictionDirective="integer" formControlName="mobileNumber"
+                       [errorStateMatcher]="matcher" (input)="validateMobileBox($event.target.value)">
+
+                <mat-hint *ngIf="!IsMobileNumberHint">{{'resources.validate_optional_field'|translate}}</mat-hint>
+                <!--<mat-hint *ngIf="IsMobileNumberValid" style="color:red">{{'resources.edit_text_employee_phone_alert'|translate}}</mat-hint>-->
+                <mat-error class="font" *ngIf="employeeForm.get('mobileNumber').hasError('pattern')">
+                  {{'resources.edit_text_employee_phone_alert'|translate}}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div style="width:250px"></div>
+
+          </div>
+        </div>
+        <br />
+
+        <div>
+          <div class="flex-container" fxLayout="row" fxLayout.xs="column">
+            <div class="flex-item" fxFlex=4>
+              <mat-checkbox name="agree" [disabled]="!IsEmailHint && !IsMobileNumberHint" (change)="AgreeCheckbox(IsChecked)" [checked]="IsChecked">
+              </mat-checkbox>
+
+            </div>
+
+            <!--english language have different text for different country-->
+            <div *ngIf="utilityService.selectedLang=='en' && utilityService.selectedCountry=='spain'"
+                 class="flex-item" fxFlex=96>
+              <mat-label class="mat-lablel">
+
+                {{'resources.personal_info_legal_agreement_spain'|translate}}
+
+                <span>
+                  <a href="https://request.privacy-bosch.com" target="_blank" rel="noopener noreferrer">
+                    https://request.privacy-bosch.com/
+                  </a>
+
+                </span>
+                <span>
+
+                  {{utilityService.selectedLang=='fr' ? 'Ce retrait n’aura d’effets que pour l’avenir.':''}}
+
+
+                </span>
+              </mat-label>
+            </div>
+            <div *ngIf="utilityService.selectedLang=='en' && utilityService.selectedCountry=='france'"
+                 class="flex-item" fxFlex=96>
+              <mat-label class="mat-lablel">
+
+                {{'resources.personal_info_legal_agreement_france'|translate}}
+
+                <span>
+                  <a href="https://request.privacy-bosch.com" target="_blank" rel="noopener noreferrer">
+                    https://request.privacy-bosch.com/
+                  </a>
+
+                </span>
+                <span>
+
+                  {{utilityService.selectedLang=='fr' ? 'Ce retrait n’aura d’effets que pour l’avenir.':''}}
+
+
+                </span>
+              </mat-label>
+            </div>
+            <div *ngIf="utilityService.selectedLang=='en' && utilityService.selectedCountry=='portugal'"
+                 class="flex-item" fxFlex=96>
+              <mat-label class="mat-lablel">
+
+                {{'resources.personal_info_legal_agreement_portugal'|translate}}
+
+                <span>
+                  <a href="https://request.privacy-bosch.com" target="_blank" rel="noopener noreferrer">
+                    https://request.privacy-bosch.com/
+                  </a>
+
+                </span>
+                <span>
+
+                  {{utilityService.selectedLang=='fr' ? 'Ce retrait n’aura d’effets que pour l’avenir.':''}}
+
+
+                </span>
+              </mat-label>
+            </div>
+
+            <div *ngIf="utilityService.selectedLang!='en'" class="flex-item" fxFlex=96>
+              <mat-label class="mat-lablel">
+
+                {{'resources.personal_info_legal_agreement'|translate}}
+
+                <span>
+                  <a href="https://request.privacy-bosch.com" target="_blank" rel="noopener noreferrer">
+                    https://request.privacy-bosch.com/
+                  </a>
+
+                </span>
+                <span>
+
+                  {{utilityService.selectedLang=='fr' ? 'Ce retrait n’aura d’effets que pour l’avenir.':''}}
+
+
+                </span>
+              </mat-label>
+            </div>
+
+            <!--END of English text-->
+
+          </div>
+          <div class="flex-container" fxLayout="row" fxLayout.xs="column">
+            <div class="flex-item" fxFlex=4></div>
+            <div class="flex-item" fxFlex=96>
+              <!--<mat-error class="font" *ngIf="!IsChecked && (IsEmailHint || IsMobileNumberHint) ">
+          {{'resources.contact_agree_error_message'|translate}}
+        </mat-error>-->
+              <p class="check-box-error-color" *ngIf="!IsChecked && (IsEmailHint || IsMobileNumberHint) ">
+                {{'resources.contact_agree_error_message'|translate}}
+              </p>
+
+            </div>
+
+          </div>
+          <!--<div class="flex-container" fxLayout="row" fxLayout.xs="column">
+    <div class="flex-item" fxFlex=4></div>
+    <div class="flex-item boxhead" fxFlex=96>
+      <p> <a href="https://request.privacy-bosch.com" target="_blank" rel="noopener noreferrer">{{'resources.personal_info_legal_agreement'|translate}}</a></p>
+      </div>
+    </div>-->
+
+        </div>
+
+        <div style="width:250px"></div>
+
+
+
+      </mat-card>
+
+      <!-- Mobile no end -->
+
+      <!-- Sick Leave details start -->
+      <mat-card class="blockStyle">
+
+        <mat-card-header>
+          <mat-card-title>
+
+            <section class="mat-typography">
+              <h1 class="font-header">{{'resources.data_of_the_disability_certificate'|translate}}</h1>
+            </section>
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <br>
+          <div fxLayout="row" class="font-paragraph">
+            {{'resources.sick_leave_header'|translate}}
+          </div>
+          <br>
+          <div fxLayout="row">
+            <div class="center-align">
+              <div *ngIf="utilityService.selectedCountry!='spain'">
+
+                <mat-checkbox (change)="InitialIllness()"
+                              value="0" class="font-paragraph" formControlName="initialIllness" fxLayoutGap="200px">
+                  {{'resources.first_time_sickness'|translate}}
+                </mat-checkbox>
+              </div>
+              <div *ngIf="utilityService.selectedCountry!='spain'" [style.width.px]="covidWidth"  >
+                <mat-checkbox (change)="RecurringIllness()"
+                              value="0" class="font-paragraph" formControlName="recurringIllness" fxLayoutGap="200px">
+                  {{'resources.follow_up_sickness'|translate}}
+                </mat-checkbox>
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='spain'">
+
+                <mat-form-field style="border-top: 0px; width: 300px;" class="font" appearance="none"
+                                [floatLabel]="'always'">
+                  <mat-label>{{'resources.request_type'|translate}}</mat-label>
+                  <mat-select placeholder="{{'resources.select_request_type'|translate}}"
+                              (selectionChange)="onRequestTypeChange($event.value)"
+                              name="requestTypesList" panelClass="langPanel" class="font dropdown-mat">
+                    <mat-option selected value="en1" class="font" *ngFor="let requestType of utilityService.requestTypes" [value]="requestType.RequestType">
+                      {{requestType.RequestType}}
+                    </mat-option>
+
+                  </mat-select>
+
+
+                </mat-form-field>
+                <mat-error class="font" *ngIf="requestTypeNotSelected" style=" font-size: 10px;    margin-top: -10px;">
+                  {{'resources.p_select_request_type'|translate}}
+                </mat-error>
+                <!--</li>
+                  </ul>
+                  </div>
+                </div>-->
+              </div>
+              <div *ngIf="utilityService.selectedCountry=='portugal'">
+
+                <mat-form-field style="border-top: 0px; width: 100px;" class="font" appearance="none"
+                                [floatLabel]="'always'">
+                  <mat-label>{{'resources.illness_type'|translate}}</mat-label>
+
+                  <mat-select placeholder="{{'resources.select_illness_type'|translate}}"
+                              (selectionChange)="onIllnessTypeChange($event.value)"
+                              name="illnessTypesList" panelClass="langPanel" class="font dropdown-mat">
+                    <mat-option selected value="en" class="font" *ngFor="let illnessType of utilityService.illnessTypes" [value]="illnessType.IllnessType">
+                      {{illnessType.IllnessType}}
+                    </mat-option>
+
+                  </mat-select>
+                </mat-form-field>
+                <!--</li>
+                  </ul>
+                  </div>
+                </div>-->
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='spain'">
+
+                <mat-form-field style="border-top: 0px; width: 400px;" class="font" appearance="none"
+                                [floatLabel]="'always'">
+
+                  <mat-label>{{'resources.kind_of_illness'|translate}}</mat-label>
+
+                  <mat-select placeholder="{{'resources.select_kind_of_illness'|translate}}"
+                              (selectionChange)="onKindofIllnessChange($event.value)"
+                              name="kindofillnessList" panelClass="langPanel" class="font dropdown-mat">
+                    <mat-option selected value="en" class="font" *ngFor="let kindillnessType of utilityService.kindofillness" [value]="kindillnessType.IllnessType">
+                      {{kindillnessType.IllnessType}}
+                    </mat-option>
+
+                  </mat-select>
+
+
+
+                </mat-form-field>
+                <mat-error class="font" *ngIf="kindofillnessNotSelected" style="    font-size: 10px;    margin-top: -10px;">
+                  {{'resources.p_select_kind_of_illness'|translate}}
+                </mat-error>
+                <!--</li>
+                  </ul>
+                  </div>
+                </div>-->
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='spain'"></div>
+            </div>
+          </div>
+          <div fxLayout="row">
+            <div class="center-align">
+              <div *ngIf="utilityService.selectedCountry=='france'">
+                <!--fxLayoutGap="200px"-->
+                <mat-checkbox class="font-paragraph" (click)="setAccident()"
+                              formControlName="accident" value="0">{{'resources.accident'|translate}}</mat-checkbox>
+              </div>
+              <div *ngIf="utilityService.selectedCountry=='france'" >
+                <mat-checkbox class="font-paragraph" (click)="setHospitalization()"
+                              formControlName="hospitalization" value="0">{{'resources.hospitalization'|translate}}</mat-checkbox>
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='france'">
+                <mat-checkbox class="font-paragraph" (change)="setCovid()"
+                              formControlName="covid" value="0">{{'resources.covid_data'|translate}}</mat-checkbox>
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='france'">
+                <mat-checkbox class="font-paragraph" (click)="setPartTime()"
+                              formControlName="partTime" value="0">{{'resources.Therapeutic_Part_Time'|translate}}</mat-checkbox>
+              </div>
+            </div>
+        </div>
+
+          <div *ngIf="utilityService.selectedCountry=='france'">
+            <mat-error *ngIf="IsRequired" class="font">
+              {{'resources.illness_error_option_fr'|translate}}
+            </mat-error>
+          </div>
+          <div *ngIf="utilityService.selectedCountry=='portugal'">
+            <mat-error *ngIf="IsRequired" class="font">
+              {{'resources.illness_error_option_po'|translate}}
+            </mat-error>
+          </div>
+          <!--<div *ngIf="utilityService.selectedCountry=='germany'">
+            <mat-error *ngIf="IsRequired" class="font">
+              {{'resources.illness_error_option'|translate}}
+            </mat-error>
+          </div>-->
+
+          <div *ngIf="utilityService.selectedCountry=='portugal'">
+            <mat-error *ngIf="tempIllnessTypeNotSelected" class="font">
+              {{'resources.illness_error_option_po'|translate}}
+            </mat-error>
+          </div>
+
+          <br />
+          <div fxLayout="row">
+            <div class="center-align">
+
+              <div *ngIf="isStartDate || utilityService.selectedCountry!='spain'">
+                <mat-form-field [floatLabel]="'always'">
+                  <mat-label>{{'resources.start_date'|translate}} <span *ngIf="utilityService.selectedCountry=='spain'"> *</span></mat-label>
+
+                  <input matInput class="font" id="dateIcon" [matDatepicker]="picker" formControlName="fromDate"
+                         [max]="minDate" (dateInput)="fromdateChange($event)" placeholder="DD/MM/YYYY" readonly>
+
+                  <mat-datepicker-toggle matSuffix [for]="picker">
+                    <mat-icon style="font-size: 24px !important" svgIcon="calender_icon" matDatepickerToggleIcon></mat-icon>
+                    <!--<mat-icon svgIcon="calender_icon" ></mat-icon>-->
+                  </mat-datepicker-toggle>
+                  <mat-datepicker color="primary" #picker></mat-datepicker>
+                  <mat-error class="font" *ngIf="employeeForm.get('fromDate').hasError('required')">
+                    {{'resources.validate_fields'|translate}}
+                  </mat-error>
+                  <mat-error class="font" *ngIf="employeeForm.get('toDate').hasError('matDatepickerFilter')">
+                    {{'resources.end_date_error_msg'|translate}}
+                  </mat-error>
+
+                 </mat-form-field>
+
+                   <mat-error class="font" *ngIf="utilityService.selectedCountry=='spain' && selectedRequestType && !fromDateStr"
+                         style="font-size:10px; margin-top: -10px;">
+                    {{'resources.spain_start_date_err_msg'|translate}}
+                   </mat-error>
+
+
+              </div>
+
+              <!--End Date-->
+              <div *ngIf="isEndDate || utilityService.selectedCountry!='spain'">
+                <mat-form-field [floatLabel]="'always'">
+                  <mat-label>{{'resources.end_date'|translate}}<span *ngIf="utilityService.selectedCountry=='spain'"> *</span></mat-label>
+
+                  <input matInput class="font" readonly [min]="maxDate " [matDatepicker]="picker2" formControlName="toDate"
+                         (dateInput)="toDateChange($event)" placeholder="DD/MM/YYYY">
+
+                  <mat-datepicker-toggle matSuffix [for]="picker2">
+                    <mat-icon style="font-size: 24px !important" svgIcon="calender_icon" matDatepickerToggleIcon></mat-icon>
+                  </mat-datepicker-toggle>
+                  <mat-datepicker color="primary" #picker2></mat-datepicker>
+                  <mat-error class="font" *ngIf="employeeForm.get('toDate').hasError('required') &&
+                             utilityService.selectedCountry!='spain'">
+                    {{'resources.validate_fields'|translate}}
+                  </mat-error>
+                  <mat-error class="font" *ngIf="employeeForm.get('toDate').hasError('matDatepickerFilter') &&
+                             utilityService.selectedCountry!='spain'">
+                    {{'resources.end_date_error_msg'|translate}}
+                  </mat-error>
+                  <mat-error class="font" *ngIf="employeeForm.get('toDate').hasError('matDatepickerMin') &&
+                             utilityService.selectedCountry!='spain'">
+                    {{'resources.end_date_error_msg'|translate}}
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-error class="font" *ngIf="utilityService.selectedCountry=='spain' && selectedRequestType && !toDateStr"
+                           style="font-size:10px; margin-top: -10px;">
+                  {{'resources.spain_end_date_err_msg'|translate}}
+                </mat-error>
+
+
+              </div>
+              <!--followup date-->
+              <div *ngIf="isFollowupDate && utilityService.selectedCountry=='spain'">
+                <mat-form-field [floatLabel]="'always'">
+                  <mat-label>{{'resources.followup_date'|translate}}<span *ngIf="utilityService.selectedCountry=='spain'"> *</span></mat-label>
+
+                  <input matInput class="font" readonly [matDatepicker]="picker2" formControlName="followupDate"
+                         (dateInput)="followupChange($event)" placeholder="DD/MM/YYYY">
+
+                  <mat-datepicker-toggle matSuffix [for]="picker2">
+                    <mat-icon style="font-size: 24px !important" svgIcon="calender_icon" matDatepickerToggleIcon></mat-icon>
+                  </mat-datepicker-toggle>
+                  <mat-datepicker color="primary" #picker2></mat-datepicker>
+                  <mat-error class="font" *ngIf="employeeForm.get('followupDate').hasError('required') && utilityService.selectedCountry!='spain'">
+                    {{'resources.validate_fields'|translate}}
+                  </mat-error>
+                  <mat-error class="font" *ngIf="employeeForm.get('followupDate').hasError('matDatepickerFilter') && utilityService.selectedCountry!='spain'">
+                    {{'resources.followup_date_error_msg'|translate}}
+                  </mat-error>
+                  <mat-error class="font" *ngIf="employeeForm.get('followupDate').hasError('matDatepickerMin') && utilityService.selectedCountry!='spain'">
+                    {{'resources.followup_date_error_msg'|translate}}
+                  </mat-error>
+                 </mat-form-field>
+
+                <mat-error class="font" *ngIf="utilityService.selectedCountry=='spain' && selectedRequestType && !followDateStr"
+                        style="font-size:10px; margin-top: -10px;">
+                  {{'resources.spain_followup_date_err_msg'|translate}}
+                </mat-error>
+              </div>
+              <div style="width:250px"></div>
+            </div>
+          </div>
+
+          <div>
+            <mat-error class="font" *ngIf="poDateValidation">
+              {{'resources.date_constraint_po'|translate}}
+            </mat-error>
+            <mat-error class="font" *ngIf="frDateValidation">
+              {{'resources.date_constraint_fr'|translate}}
+            </mat-error>
+          </div>
+
+        </mat-card-content>
+
+      </mat-card>
+
+
+      <mat-card class="blockStyle">
+
+        <mat-card-header>
+          <mat-card-title>
+
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div fxLayout="row" class="font-paragraph">
+            {{'resources.document_header'|translate}} *
+          </div>
+
+          <div>
+            <a [routerLink]="" (click)="onIntermediateImage()">{{'resources.certificate-help'|translate}}</a>
+          </div><br />
+          <div fxLayout="row wrap" fxLayoutGap="30px">
+            <!--<button (click)="uploader.click()"> {{'resources.upload'|translate}} </button>-->
+            <label for="input-file-id" class="mat-raised-button" style="border: 1px solid #005691;min-width: 200px;">
+              <!-- <mat-icon color="primary" style="position: relative; top: 4px;">folder_open</mat-icon>  -->
+              <mat-icon color="primary" style="position: relative; top: 4px;" svgIcon="upload_icon"></mat-icon>
+              <span class="font" style="position: relative; top: -1px; left: 5px;" fxFlex="wrap">
+                {{'resources.upload'|translate}}
+
+                <input #uploader class="font ng-hide" formControlName="attachment" id="input-file-id" type="file"
+                       accept=".png, .jpg, .jpeg" (change)="onSelectFile($event)"
+                       style="visibility: visible" />
+
+              </span>
+
+            </label>
+            <mat-hint class="font" style="padding-top:6px !important;">{{'resources.document_hint'|translate}}</mat-hint>
+            <div #myDiv hidden (click)="uploader.click()"></div>
+          </div>
+          <br>
+          <div fxLayout="column">
+            <div>
+              <img *ngIf="selectedFiles?.name" [src]="url" style="width: 150px; height: 150px; " name="imgData" id="imgData">
+            </div>
+
+            <mat-error class="font" *ngIf="!IsvalidationStep1">{{'resources.ocr_validation_step1_fail_msg'|translate}}</mat-error>
+            <mat-error class="font" *ngIf="!IsvalidationStep2">{{'resources.ocr_validation_step2_fail_msg'|translate}}</mat-error>
+            <mat-error class="font" *ngIf="!IsvalidationStep3">{{'resources.ocr_validation_step3_fail_msg'|translate}}</mat-error>
+            <div>
+              <mat-label style="float: left; margin-top: 7px;">
+                <h5 class="font">{{selectedFiles?.name}}</h5>
+                <mat-error class="font" *ngIf="!isFileFormatAllowed">{{'resources.document_hint'|translate}}</mat-error>
+                <mat-error class="font" *ngIf="!isFileExtensionAllowed">{{'resources.document_exten_error'|translate}}</mat-error>
+              </mat-label>
+              <button class="font" type="button" mat-icon-button *ngIf="selectedFiles?.name" (click)="imageDelete()">
+                <!--<mat-icon>delete</mat-icon>-->
+                <mat-icon style="position: relative;" svgIcon="delete_icon"></mat-icon>
+              </button>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="center">
+            <b>
+              <mat-label class="mat-lablel">
+                {{'resources.proceedlink'|translate}}
+              </mat-label>
+            </b>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="center">
+
+
+            <a (click)="openAgreement()" style="color: #005691; border-bottom: solid 1px #005691; display: block; padding-top:4px;" class="font">
+            {{'resources.data_privacy'|translate}}</a>
+          </div>
+
+
+          <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="center" style="margin-top:10px;">
+            <button type="submit" mat-raised-button color="primary" [disabled]="(employeeForm.invalid ) || isNotMatched ||
+                    ((IsEmailHint || IsMobileNumberHint)&& !IsChecked) || IsRequired || IsAgree || ( !recurringIllness && !initialIllness)
+                    ||frDateValidation||poDateValidation|| (utilityService.selectedCountry=='portugal' && illnessTypeNotSelected)||(utilityService.selectedCountry=='spain' && requestTypeNotSelected && kindofillnessNotSelected)||(utilityService.selectedCountry=='spain' && isSpainDateNotValid)"
+                    (click)="extractFormControlValues('fromForm')" matStepperNext>
+              {{'resources.continue_button'|translate}}
+            </button>
+            <!--<button type="submit" mat-raised-button color="primary" [disabled]=" isNotMatched ||
+                    ((IsEmailHint || IsMobileNumberHint)&& !IsChecked) || IsRequired || IsAgree ||(utilityService.selectedCountry=='spain' && requestTypeNotSelected)"
+                    (click)="extractFormControlValues('fromForm')" matStepperNext *ngIf=" utilityService.selectedCountry=='spain'">
+              {{'resources.continue_button'|translate}}
+            </button>-->
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <!-- Attachment Area End-->
+
+    </form>
+
+  </mat-step>
+
+  <!----Confirmation-->
+
+  <mat-step label="{{'resources.confirmation'|translate}}">
+    <form [formGroup]="employeeForm1" novalidate>
+
+      <mat-card class="blockStyle">
+        <mat-card-header style="margin: 0 !important;">
+          <mat-card-title>
+            <div class="font-paragraph">
+              {{'resources.done'|translate}}
+            </div>
+            <div style="margin-top: 10px;" class="font-paragraph">
+              {{'resources.verify'|translate}}
+            </div>
+            <br>
+
+            <div class="mat-typography">
+              <h1 class="font-header">{{'resources.associate_header'|translate}}</h1>
+            </div>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="margin-left: 8px !important;">
+          <div fxLayout="row">
+            <div class="center-align">
+              <div>
+                <mat-form-field>
+                  <input type="text" maxlength="8" matInput placeholder="{{'resources.edit_text_employee_number_title'|translate}}" class="font"
+                         formControlName="employeeNumber1" [errorStateMatcher]="matcher" readonly
+                         [value]="associateDetails?.AssociateNumber ? associateDetails.AssociateNumber:''">
+
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field>
+                  <input class="font" matInput placeholder="{{'resources.edit_text_employee_first_name_title'|translate}}" formControlName="employeeFirstName1"
+                         [errorStateMatcher]="matcher" readonly
+                         [value]="associateDetails?.AssociateFirstName ? associateDetails.AssociateFirstName:''">
+
+
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field>
+                  <input class="font" matInput placeholder="{{'resources.edit_text_employee_last_name_title'|translate}}" formControlName="employeeLastName1"
+                         [errorStateMatcher]="matcher" readonly
+                         [value]="associateDetails?.AssociateLastName ? associateDetails.AssociateLastName:''">
+
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div fxLayout="row">
+            <div class="center-align">
+              <div>
+                <mat-form-field>
+                  <input matInput placeholder="{{'resources.edit_text_employee_email_id_title'|translate}}" formControlName="email1" class="font"
+                         [errorStateMatcher]="matcher" readonly
+                         [value]="associateDetails?.AssociateEmail ? associateDetails.AssociateEmail:''">
+
+
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field>
+
+                  <input matInput class="font" type="text" placeholder="{{'resources.edit_text_employee_mobile_number_title'|translate}}"
+                         readonly
+                         [value]="associateDetails?.AssociateMobileNumber ? associateDetails.AssociateMobileNumber :''">
+
+                </mat-form-field>
+              </div>
+              <div style="width:250px"></div>
+            </div>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+
+
+      <mat-card class="blockStyle">
+        <mat-card-header>
+          <mat-card-title>
+
+            <section class="mat-typography">
+              <h1 class="font-header">{{'resources.sickleave_header'|translate}}</h1>
+            </section>
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <br>
+          <div fxLayout="row wrap">
+            <div class="center-align">
+              <div style="width:17%;" *ngIf="utilityService.selectedCountry!='spain'">
+                <mat-checkbox [checked]="initialIllness"
+                              value="0" class="font-paragraph" formControlName="initialIllness1" fxLayoutGap="240px">
+                  {{'resources.first_time_sickness'|translate}}
+                </mat-checkbox>
+              </div>
+              <!-- style="width:937px;" -->
+              <div  *ngIf="utilityService.selectedCountry!='spain'" [style.width.px]="covidWidth">
+                <mat-checkbox [checked]="recurringIllness"
+                              value="1" class="font-paragraph" formControlName="recurringIllness1">
+                  {{'resources.follow_up_sickness'|translate}}
+                </mat-checkbox>
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='portugal'" class="font" style="width:48%;">
+                <mat-label>{{'resources.illness_type'|translate}} :  {{selectedIllnessType}}</mat-label>
+              </div>
+              <div *ngIf="utilityService.selectedCountry=='spain'" class="font" style="width:48%;">
+                <mat-label>{{'resources.request_type'|translate}} :  {{selectedRequestType}}</mat-label>
+              </div>
+              <div *ngIf="utilityService.selectedCountry=='spain'" class="font" style="width:48%;">
+                <mat-label>{{'resources.kind_of_illness'|translate}} :  {{selectedKindofIllness}}</mat-label>
+              </div>
+            </div>
+            <div class="center-align">
+              <div *ngIf="utilityService.selectedCountry=='france'" style="width:18%;">
+                <mat-checkbox formControlName="accident1" value="true" class="font-paragraph"
+                              [checked]="associateDetails?.WorkDisabilityCertificateDetails?.Accident">
+                  {{'resources.accident'|translate}}
+                </mat-checkbox>
+              </div>
+              <div *ngIf="utilityService.selectedCountry=='france'" style="width:18%;">
+                <mat-checkbox class="font-paragraph" [checked]="hospitalization"
+                              formControlName="hospitalization1" value="0">{{'resources.hospitalization'|translate}}</mat-checkbox>
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='france'" style="width:18%;">
+                <mat-checkbox class="font-paragraph" [checked]="covid"
+                              formControlName="covid1" value="0">{{'resources.covid_data'|translate}}</mat-checkbox>
+              </div>
+
+              <div *ngIf="utilityService.selectedCountry=='france'" style="width:18%;">
+                <mat-checkbox class="font-paragraph" [checked]="partTime"
+                              formControlName="partTime1" value="0">{{'resources.Therapeutic_Part_Time'|translate}}</mat-checkbox>
+              </div>
+           </div>
+          </div>
+
+
+          <br>
+          <div fxLayout="row">
+            <div class="center-align">
+              <div *ngIf="isStartDate || utilityService.selectedCountry!='spain'">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker1" class="font"
+                         placeholder="{{'resources.start_date'|translate}}" formControlName="fromDate1"
+                         (dateInput)="fromdateChange($event)" readonly
+                         [value]="associateDetails?.WorkDisabilityCertificateDetails?.StartDate ? associateDetails.WorkDisabilityCertificateDetails.StartDate : ' '">
+                  <mat-datepicker-toggle matSuffix [for]="picker1">
+                    <mat-icon svgIcon="calender_icon" matDatepickerToggleIcon></mat-icon>
+                  </mat-datepicker-toggle>
+                  <mat-datepicker color="primary" #picker1></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div *ngIf="isEndDate || utilityService.selectedCountry!='spain'">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker12" readonly class="font"
+                         placeholder="{{'resources.end_date'|translate}}" formControlName="toDate1"
+                         [value]="associateDetails?.WorkDisabilityCertificateDetails?.EndDate ? associateDetails.WorkDisabilityCertificateDetails.EndDate : ' '">
+                  <mat-datepicker-toggle matSuffix [for]="picker12">
+                    <mat-icon svgIcon="calender_icon" matDatepickerToggleIcon></mat-icon>
+                  </mat-datepicker-toggle>
+                  <mat-datepicker color="primary" #picker12></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div *ngIf="isFollowupDate && utilityService.selectedCountry=='spain'">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker12" readonly class="font"
+                         placeholder="{{'resources.followup_date'|translate}}" formControlName="followupDate1"
+                         [value]="associateDetails?.WorkDisabilityCertificateDetails?.FollowupDate ? associateDetails.WorkDisabilityCertificateDetails.FollowupDate : ' '">
+                  <mat-datepicker-toggle matSuffix [for]="picker12">
+                    <mat-icon svgIcon="calender_icon" matDatepickerToggleIcon></mat-icon>
+                  </mat-datepicker-toggle>
+                  <mat-datepicker color="primary" #picker12></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div style="width:250px" *ngIf="utilityService.selectedCountry!='spain'"></div>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutGap="30px">
+            <div fxLayout="column wrap" fxLayoutGap="30px">
+              <br>
+              <div fxLayout="row">
+                <img *ngIf="selectedFiles?.name" [src]="url"
+                     style="width: 400px; height: 300px;">
+              </div>
+            </div>
+          </div>
+          <br>
+          <div>
+
+
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px; pointer-events: initial !important;">
+            <button mat-raised-button color="primary" matStepperPrevious style="margin-right: 10px;"> {{'resources.back_button'|translate}} </button>
+            <button type="submit" (click)="OnSubmit(stepper)" mat-raised-button color="primary"
+                    id="submitEnableByCaptcha">
+              {{'resources.submit'|translate}}
+            </button>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+    </form>
+  </mat-step>
+
+  <!-- Final tab  Start-->
+  <mat-step label="{{'resources.farewell'|translate}}">
+
+    <mat-card class="blockStyle">
+      <mat-card-header>
+        <mat-card-title>
+
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card style="background: #fff !important">
+        <div *ngIf="responseData!=null && responseData.ResponseDataDetails!=null && errorOccurred">
+
+          <!--fr-->
+          <div fxLayout="row" class="font-paragraph" style="font-family: 'boschsans_regular';" *ngIf="utilityService.selectedCountryCode=='fr'"
+               [innerHTML]="'resources.reference_number'|translate:{'ReferenceNumber':responseData.ResponseDataDetails[0].ReferenceNumber}">
+          </div>
+
+          <div style="font-family: 'boschsans_regular';" *ngIf="utilityService.selectedCountryCode=='fr'"
+               [innerHTML]="'resources.reference_number_1'|translate">
+          </div>
+
+          <div *ngIf="utilityService.selectedCountryCode=='fr'">
+            <p class="font-weight">
+              <b>
+                {{'resources.reference_number_8'|translate}}
+              </b>
+            </p>
+          </div>
+
+          <div style="font-family: 'boschsans_regular';" *ngIf="utilityService.selectedCountryCode=='fr'"
+               [innerHTML]="'resources.reference_number_2'|translate">
+          </div>
+          <!--fr-->
+          <!--po-->
+          <div fxLayout="row" class="font-paragraph" style="font-family: 'boschsans_regular';" *ngIf="utilityService.selectedCountryCode=='po'"
+               [innerHTML]="'resources.reference_number_6'|translate:{'ReferenceNumber':responseData.ResponseDataDetails[0].ReferenceNumber}">
+          </div>
+          <div style="font-family: 'boschsans_regular';" *ngIf="utilityService.selectedCountryCode=='po'">
+            <p>{{'resources.reference_number_7'|translate}}</p>
+          </div>
+          <!--po-->
+          <!--es-->
+          <div fxLayout="row" class="font-paragraph" style="font-family: 'boschsans_regular';"
+               *ngIf="utilityService.selectedCountryCode=='es'"
+               [innerHTML]="'resources.reference_number_9'|translate:{'ReferenceNumber':responseData.ResponseDataDetails[0].ReferenceNumber}">
+          </div>
+          <div style="font-family: 'boschsans_regular';" *ngIf="utilityService.selectedCountryCode=='es'">
+            <p>{{'resources.reference_number_7'|translate}}</p>
+          </div>
+          <div style="font-family: 'boschsans_regular';" *ngIf="utilityService.selectedCountryCode=='es'"
+               [innerHTML]="'resources.reference_number_5'|translate">
+          </div>
+          <!--es-->
+
+        </div>
+        <div *ngIf="!errorOccurred">
+
+          <span class="font">
+
+            {{'resources.network_error'|translate}}
+          </span>
+        </div>
+
+      </mat-card>
+    </mat-card>
+  </mat-step>
+  <!-- Final tab  End-->
+</mat-horizontal-stepper>

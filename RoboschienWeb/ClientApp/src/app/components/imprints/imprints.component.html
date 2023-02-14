@@ -1,0 +1,2873 @@
+
+
+
+<div class="M-Container col-xs-12">
+
+  <div class="row col-xs-12">
+    <div class="Home row col-xs-1 font-paragraph">Home ></div>
+    <div class="Header_Text row col-xs-11 font-paragraph">{{title}}</div>
+  </div>
+
+  <br />
+  <br />
+  <div class="Header">
+    <div class="HeaderRow Text_Font ">
+      <div class=" Text_Font font-paragraph " style="height:50%;">
+        <h2>{{title}}</h2>
+      </div>
+      <div class=" Text_Font font-paragraph " style="height:50%;">
+        <h4>{{description}}</h4>
+      </div>
+    </div>
+  </div>
+
+
+  <!--starts FR-->
+  <div *ngIf="selectedCountry=='france' && selectedlanguage=='fr'">
+    <div class=" col-xs-12 font-paragraph">
+      <mat-tab-group mat-stretch-tabs class="col-xs-12" (selectedTabChange)="tabChangeEventForFR($event)">
+        <mat-tab mat-ink-bar label="Informations corporate">
+          <div id="Corporateinformation" class="tabcontent Text_Font font-paragraph">
+            <div class="M-Text-Monolith__description">
+              <div class="A-Text-RichText">
+                <br>
+                <br>
+                <p>
+                  <b class="font-weight-bold ">Mentions légales</b>
+                </p>
+                <p>
+                  <b class="font-weight-bold">
+                    Département Responsable de l’App
+                  </b>
+                </p>
+                <p>
+                  GS/HRS-FR
+                  <br />32 avenue Michelet
+                  <br />93400 Saint-Ouen
+                  <br />FRANCE
+                  <br />HRServiceFR@fr.bosch.com
+                  <br />++33 1 75 34 55 50
+
+                </p>
+                <P><b class="font-weight-bold">Mentions légales</b></P>
+                <!--<p>
+                  <a target="_blank" href="AUB.AppundWeblink@de.bosch.com" rel="noopener noreferrer">
+                    <span class="A-Link__linkText">AUB.AppundWeblink@de.bosch.com </span>
+                  </a>
+                  <br>+49 711 811-40000
+                </p>-->
+                <p><b class="font-weight-bold">Nom et adresse</b></p>
+                <p>Robert Bosch (France) S.A.S.<br />32 avenue Michelet<br />93400 Saint-Ouen<br>France</p>
+
+                <p><b class="font-weight-bold">Président</b></p>
+                <p>Heiko Carrie</p>
+                <br />
+                <p><b class="font-weight-bold">Votre contact chez Bosch</b></p>
+                <p>
+                  <a target="_blank" href="contact@fr.bosch.com" rel="noopener noreferrer">
+                    <span class="A-Link__linkText">contact@fr.bosch.com</span>
+                  </a>
+                  <br>0811 224 225
+                </p>
+                <p><b class="font-weight-bold">Registre du commerce et des sociétés</b></p>
+                <p>Bobigny sous le numéro RCS 572 067 684</p>
+                <p><b class="font-weight-bold">Numéro d‘identification de la TVA</b></p> <p>FR 09 572 067 684</p>
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Informations légales" class="font-paragraph">
+          <div id="Legalnotice" class="tabcontent Text_Font">
+
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <br>
+                  <br>
+                  <b class="font-weight-bold">Copyright (©)</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+
+                    <p>
+                      Tous droits réservés. Les textes, images, graphiques, sons, animations et vidéos ainsi
+                      que leur disposition sur les sites Web de Bosch sont soumis à la protection du droit
+                      d’auteur et à d’autres lois de protection. Il est interdit de copier, de diffuser ou de
+                      modifier le contenu de ces sites Web à des fins commerciales ou d’en permettre l’accès
+                      à des tiers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold">Trademarks</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Sauf indication contraire, toutes les marques apparaissant sur les sites Web de Bosch sont la
+                      propriété intellectuelle de Robert Bosch GmbH, Allemagne.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold"> Enregistrement des marques</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Sauf indication contraire, toutes les marques apparaissant sur les sites Web de Bosch sont la propriété
+                      intellectuelle de Robert Bosch GmbH, Allemagne.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold"> Licences</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Aucune licence d'utilisation de la propriété intellectuelle (en particulier des brevets, marques et
+                      droits d'auteur) de sociétés du groupe Bosch (Bosch) ou de tiers n'est octroyée par ce site Web ou
+                      cette application.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <b class="font-weight-bold"> Médiation de la consommation</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Médicys est l’organisme médiateur de la société Bosch pour les litiges de consommation exclusivement. En cas de litige
+                      qui n’aurait pu être réglé par notre service client, vous pouvez le contacter sur leur site Internet : www.medicys.fr,
+                      par courrier électronique :
+                    </p>
+                    <p>
+                      contact@medicys.fr ou par voie postale : Médicys – Service Médiation de
+                      la consommation – 73 boulevard de Clichy 75009 Paris. Tout consommateur qui saisit Médicys doit pouvoir
+                      prouver qu’il a, au préalable, tenté de résoudre son litige directement avec notre société.
+                    </p>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold"> Règlement des litiges en ligne</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Information relative au règlement des litiges en ligne : la Commission Européenne met en place une
+                      plateforme pour le règlement des litiges en ligne. L’objectif de cette plateforme est de fournir la
+                      possibilité du règlement extrajudiciaire de litiges qui concernent des engagements contractuels relatifs
+                      à des achats et des prestations de services en ligne.
+                    </p>
+                    <p> Cliquez sur ce lien http://ec.europa.eu/consumers/odr/ pour consulter la plateforme.</p>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Information sur la protection des données" class="font-paragraph">
+          <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+            <br>
+            <br>
+
+            <p>
+              <b class="font-weight-bold">
+                Politique de confidentialité relative l’application Bosch SAM
+              </b>
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Bosch respecte votre vie privée
+              </b>
+            </p>
+
+            <p>
+              Nous respectons votre vie privée et nous nous engageons à la protéger.
+              <br />La présente déclaration reflète la culture du et manifeste sa volonté de promouvoir une collecte et une utilisation de vos données loyales, responsables et sécurisées.
+
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Responsable du traitement
+              </b>
+            </p>
+
+            <p>
+              Le responsable du traitement de vos données est l'entité légale du Groupe Bosch avec lequel vous êtes sous contrat.
+              Ses coordonnées figurent sur votre contrat de travail.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Collecte, traitement et utilisation des données personnelles/ Catégories de données faisant l’objet d’un traitement
+              </b>
+            </p>
+
+            <p>
+              Nous collectons les catégories de données suivantes à l’occasion de l’utilisation de cette application :
+            </p>
+
+
+            <ul>
+              <li>
+                Données d’identification
+                <ul>
+                  <li>Nom, prénom, matricule du personnel</li>
+                  <li>Adresse email, téléphone portable (données optionnelles)</li>
+                </ul>
+              </li>
+
+              <li>
+                Données de santé
+
+                <ul>
+                  <li>Photo du volet employeur de l’arrêt de travail intégralement rempli </li>
+                </ul>
+              </li>
+            </ul>
+
+
+
+
+            <p>
+              <b class="font-weight-bold">
+                Définition des données personnelles
+              </b>
+            </p>
+
+            <p>
+              Les données personnelles sont toute information qui se rapporte à une personne physique identifiée ou identifiable (ex : nom, prénom, adresse postale et email, téléphone portable, photographie, ses données de santé physique ou mentale, la prestation de services de santé, et/ou toute autre information sur son état de santé).
+              <br /> Nous collectons, traitons et utilisons des données à caractère personnel (y compris des adresses IP) uniquement sur une base légale ou si vous avez donné votre consentement pour le traitement ou l'utilisation de vos données à caractère personnel comme pour cette application.
+
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Finalités et bases légales
+              </b>
+            </p>
+
+            <p>
+              Vos données sont collectées pour les finalités et sur les bases légales suivantes :
+            </p>
+
+            <ul>
+              <li>Collecte et transmission de l’arrêt de travail (obligation légale)</li>
+              <li>Administration technique de l’application (intérêts légitimes de l’entreprise)</li>
+              <li>Sauvegarde et défense de nos droits (base légale : intérêts légitime de défendre nos droits)</li>
+              <li>Gestion de l’exercice de vos droits (base légale : obligation légale)</li>
+            </ul>
+
+
+
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Transfert des données
+              </b>
+            </p>
+
+            <p>Transfert des données dans le Groupe Bosch</p>
+
+            <p style="margin-left:10px;">
+              Nous partageons vos données personnelles avec d’autres entités du Groupe Bosch (HRL locale, GS/HRS-FR). Seules les personnes habilitées par
+              leur mission et/ou fonctions ont accès aux données, notamment votre supérieur hiérarchique pour la période d’absence.
+            </p>
+
+            <p> Transfert à d’autres responsables de traitement</p>
+
+            <p class="text-marging-10">
+              Nous sommes susceptibles de communiquer vos données personnelles à d’autres responsables de traitement dans le cadre d’une obligation légale et/ou contractuelle, en cas de réquisition administration et/ou judiciaire, dans notre intérêt légitime ou celui d’un tiers ou encore lorsque vous donnez votre consentement.
+              <br />Vous trouverez les informations nécessaires dans la section Finalités et bases légales du traitement.
+            </p>
+
+            <p>Prestataires de service</p>
+
+            <p class="text-marging-10">
+              Nous sommes susceptibles de confier certaines missions à des prestataires de services externes telles que la programmation, la maintenance et l’assistance.
+              <br />Le choix de ces prestataires de services est effectué avec le plus grand soin et nous nous engageons à contrôler régulièrement la façon dont sont traitées et sécurisées les données que nous leur confions et stockées dans leurs locaux. Les prestataires peuvent être des entités du Groupe Bosch.
+              <br />La gestion de l’application a été confiée à
+              <br />Robert Bosch Engineering and Business solutions Private Limited
+              <br />123, Ind. Layout, Hosur Road, Koramangala,
+              <br /> 560095 Bangalore, India.
+              <br />Contact details: + 91 80665 75757
+
+            </p>
+
+            <p>Transmission à des destinataires hors de l’Espace économique européen (EEE)</p>
+            <p class="text-marging-10">
+              Nous sommes également susceptibles de transmettre vos données à des destinataires en dehors de l’Union européenne, appelés pays tiers.
+              <br /> Dans ce cas, nous nous assurons, avant le transfert, que le pays tiers dispose d’un niveau de protection des données approprié (ex : sur la base d’une décision d’adéquation validée par la Commission européenne ou des clauses contractuelles types) ou encore sur la base de votre consentement.
+              <br />Vous pouvez obtenir la liste des destinataires situés dans des pays tiers ainsi une copie des dispositions contractuelles assurant un niveau de protection des données approprié. Veuillez-vous reporter à la Section 1 Responsable de traitement.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Durée de conservation
+              </b>
+            </p>
+
+            <p>
+              Vos données sont conservées 3 mois sur l’interface utilisateur de HRS sauf prescriptions légales contraires
+              (ex : en matière de maladie professionnelle, aggravation accident de travail…). Les arrêts de travail seront conservés
+              le temps nécessaire à leur gestion.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Utilisation de l’application mobile
+              </b>
+            </p>
+            <p>
+              En plus de nos Offres en ligne, nous proposons des applications mobiles ("Applications") que vous pouvez télécharger sur votre appareil mobile.
+              En plus des données collectées sur nos Sites internet, nous collectons vos données personnelles via nos applications attachées spécifiquement
+              à l'utilisation d'un terminal mobile. Cette collecte repose sur votre consentement exprès.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Traitement des données par les opérateurs d'App Store </b></p>
+
+            <p>
+              Nous ne sommes pas responsables des traitements mis en place avec vos données personnelles
+              (le nom d’utilisateur, adresse email et identifiant du terminal utilisé) par les opérateurs d’App Store lors du
+              téléchargement d’une application (ex. Google Play de Google, App Store d'Apple, Galaxy Apps Store de Samsung).
+              Nous vous invitions à consulter la Politique de confidentialité de ses Prestataires.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Cookies</b></p>
+            <p>
+              Notre Offre en ligne n’utilise aucune Cookies.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Plugins </b></p>
+
+            <p>
+              Nos offres utilisent le plugin "Google ReCaptcha" afin de garantir le bon fonctionnement de l'application.
+              <br />Le plugin est une extension indépendante du Prestataire Google localisé aux Etats-Unis utilisée pour autoriser les notifications des personnes physiques à l’exclusion de celles d’automates comme les robots. Le plugin transmet des informations sur vos matériel, logiciel, terminal et application ainsi que le résultat de la demande de sécurité.
+              <br /> En utilisant le plugin, votre navigateur Internet se connecte au serveur du Prestataire et communique des informations sur la page cliquée, le matériel et logiciel, le terminal et le résultat de la demande de sécurité.  Les fichiers journaux, y compris l'adresse IP, sont directement transmis par votre navigateur Internet au serveur du Prestataire et sont enregistrés. Le Prestataire, ses serveurs inclus, peuvent se trouver en dehors de l'UE ou de l'EEE (ex. États-Unis).
+              <br />Par défaut, les plugins sont désactivés lorsque vous visitez nos sites internet. Les plugins s’activent lorsque vous cliquez sur le bouton.
+              <br /> Si vous ne souhaitez pas que les Prestataires collectent et utilisent vos données, ne cliquez pas sur les plugins.
+              <br />Nous ne sommes pas responsables des données collectées et utilisées par le Prestataire via ses plugins. Nous vous recommandons de consulter la politique de confidentialité du Prestataire pour en savoir plus.
+
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Sécurité </b></p>
+            <p>
+              Tous nos collaborateurs et nos prestataires de services sont soumis à une obligation de confidentialité et de respect de la législation en vigueur en matière de protection de données.
+              <br />Nous prenons toutes les mesures techniques et organisationnelles nécessaires pour assurer la sécurité, la protection de vos données personnelles et prévenir les risques de destruction accidentelle ou illégale, manipulation, perte, modification, divulgation ou d’accès non autorisée et ce conformément à l’état de l’art.
+
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Droits des personnes </b></p>
+
+            <p>
+              Veuillez-vous assurer au moment de l’exercice de vos droits que votre identité soit clairement établie.
+              <br /> Pour faire valoir vos droits, veuillez utiliser les coordonnées fournies dans la section Contact.
+
+            </p>
+
+            <p>Droit d’information et droit d’accès</p>
+            <p class="text-marging-10">Vous disposez d’un droit d’information sur le traitement en cours de vos données et le cas échéant un droit d’accès sur celles-ci.</p>
+
+            <p>Droit de rectification, suppression et mise à jour</p>
+
+            <p class="text-marging-10">
+              Vous avez le droit d’obtenir de notre part la rectification de vos données personnelles inexactes, leur mise à jour ainsi que leur
+              effacement à l’exclusion des données soumises à prescription légale notamment les données de facturation ou de comptabilité.
+              <br />Dans ce cas, le traitement sera limité (voir ci-après).
+            </p>
+
+            <p>Droit à la limitation</p>
+            <p class="text-marging-10">
+              Vous avez le droit d’obtenir de notre part la limitation du traitement dans les cas limitativement prévus par la loi.
+            </p>
+
+            <p>Droit d’opposition au traitement</p>
+            <p class="text-marging-10">
+              Vous disposez du droit de vous opposer, à tout moment, à ce que vos données fassent l’objet d’un traitement à des fins de prospection commerciale, et ce sans motif et sans frais, ou de vous opposer sur la base d’un intérêt légitime dans la limite des cas prévus par la loi.
+              <br />Dans ce dernier cas, nous cesserons de traiter vos données sauf s’il existe des motifs légitimes et impérieux pour que nous poursuivions le traitement, ou pour la défense de nos droits.
+
+            </p>
+
+            <p>Droit de retrait</p>
+
+            <p class="text-marging-10">
+              Vous disposez du droit de retirer votre consentement à tout moment.
+              Le retrait du consentement ne compromet pas la licéité du traitement fondé sur le consentement effectué avant ce retrait.
+            </p>
+
+
+            <p>Droit à la portabilité</p>
+
+            <p class="text-marging-10">
+              Vous disposez du droit à la portabilité. Le droit à la portabilité se distingue du droit d’accès qui s’exerce sur l’ensemble de vos données.
+              <br />Le droit à la portabilité ne s’exerce que sur les données que vous nous fournissez et traitées sur la base de votre consentement ou de l’exécution du contrat.
+            </p>
+
+            <p>Droit de donner des directives sur le sort de ses données</p>
+
+            <p class="text-marging-10">
+              Vous disposez du droit de définir des directives relatives à la conservation, à l’effacement et la communication de vos données à caractère personnel après votre décès.
+              <br /> Vous avez ainsi le droit d’organiser le sort de vos données post-mortem dans le respect de la loi n°2016-1321 du 7 octobre 2016 pour une République numérique.
+
+            </p>
+
+            <p>Droit d’introduire une réclamation</p>
+
+            <p class="text-marging-10">
+
+              Vous disposez également du droit d’introduire une réclamation auprès de l’autorité de contrôle, la CNIL
+              (Commission Nationale Informatique et Libertés), à l’adresse postale suivante : CNIL, 3 place de Fontenoy TSA 80715,
+              Paris(75334) ou par email : <a target="_blank" href="https://www.cnil.fr/fr/agir" rel="noopener noreferrer">https://www.cnil.fr/fr/agir </a>
+            </p>
+
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Mise à jour </b></p>
+            <p>
+              Nous sommes susceptibles de mettre à jour notre politique de confidentialité au regard des progrès techniques et technologiques.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Contact </b></p>
+            <p>
+              <br /> Pour nous contacter, vous trouverez notre adresse dans votre contrat de travail.
+              <br /> Pour faire valoir vos droits et signaler les incidents liés à la protection des données, veuillez suivre le lien suivant : <a target="_blank" href="https://www.bkms-system.net/bosch-dataprotection" rel="noopener noreferrer">
+                https://www.bkms-system.net/bosch-dataprotection
+              </a>
+              <br /> Pour l’exercice de vos droits (réclamation, suggestion), vous pouvez contacter notre délégué à la protection des données en précisant l’objet de la demande « droit des personnes » :
+              <br /> Délégué du Groupe à la protection des données
+              <br /> Sécurité de l’information et protection des données du Groupe Bosch (C/ISP)
+              <br />Robert Bosch GmbH
+              <br /> Postbox 30 02 20
+              <br /> 70442 Stuttgart
+              <br /> GERMANY
+
+            </p>
+
+
+
+            <p>
+              ou <br>
+              <a target="_blank" href="DPO@bosch.com " rel="noopener noreferrer">
+                <span class="A-Link__linkText">DPO@bosch.com </span>
+              </a>
+            </p>
+
+            <p><b class="font-weight-bold">Date d’effectivité de la Politique de Confidentialité</b> </p>
+            <p>La présente politique de confidentialité est effective depuis le 1er juin 2021.</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="FOSS Licenses" class="font-paragraph">
+          <div id="Foss-Licenses" class="tabcontent Text_Font">
+            <br />
+            <p><b>FOSS Packages & Licenses</b></p>
+            <app-foss-license></app-foss-license>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <!--<hr>-->
+    </div>
+  </div>
+
+  <!--start FR-English-->
+
+  <div *ngIf="selectedCountry=='france' && selectedlanguage!='fr'">
+    <div class=" col-xs-12 font-paragraph">
+      <mat-tab-group mat-stretch-tabs class="col-xs-12" (selectedTabChange)="tabChangeEvent($event)">
+        <mat-tab mat-ink-bar label="Corporate information">
+          <div id="Corporateinformation" class="tabcontent Text_Font font-paragraph">
+            <div class="M-Text-Monolith__description">
+              <div class="A-Text-RichText">
+                <br>
+                <br>
+                <p>
+                  <b class="font-weight-bold ">App Responsible person / department designation</b>
+                </p>
+
+                <p>
+                  GS/HRS-FR
+                  <br>32 avenue Michelet
+                  <br>93400 Saint-Ouen
+                  <br>FRANCE
+                  <br />HRServiceFR@fr.bosch.com
+                  <br />++33 1 75 34 55 50
+
+                </p>
+                <P><b class="font-weight-bold">Corporate and legal information</b></P>
+
+                <p><b class="font-weight-bold">Name and address</b></p>
+                <p>Robert Bosch (France) S.A.S.<br />32 avenue Michelet<br />93400 Saint-Ouen<br />France</p>
+
+                <p><b class="font-weight-bold">Members of the Board of Management</b></p>
+                <p>
+                  Heiko Carrie
+                </p>
+                <p><b class="font-weight-bold">Your contact at Bosch</b></p>
+                <p>
+                  <a target="_blank" href="contact@fr.bosch.com" rel="noopener noreferrer"><span class="A-Link__linkText">contact@fr.bosch.com</span></a>
+                  <br>0811 224 225
+                </p>
+                <p><b class="font-weight-bold">Register Entries</b></p>
+                <p>Bobigny under number RCS 572 067 684</p>
+                <p><b class="font-weight-bold">Value-added tax identification number</b></p> <p>FR 09 572 067 684</p>
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Legal notice" class="font-paragraph">
+          <div id="Legalnotice" class="tabcontent Text_Font">
+
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <br>
+                  <br>
+                  <b class="font-weight-bold">Copyright (©)</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+
+                    <p>
+                      All the content of this website (especially text, images, graphics, sound, animations, and videos) and the
+                      positioning thereof in Bosch websites is subject to copyright protection and to other protection laws.
+                      Without the consent of the respective rights owner, the content of these websites may not be copied,
+                      disseminated, modified, or made accessible to third parties for commercial purposes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold">Trademarks</b>
+                </p>
+
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      <br />Unless otherwise indicated, the trademarks used on our sites are the intellectual property of Robert Bosch GmbH, Germany.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold"> No license</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      No license to use the intellectual property (in particular the patents, trademarks, and copyrights) of
+                      companies in the Bosch Group (Bosch) or of third parties is granted by way of this website.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <b class="font-weight-bold"> Information on Online Dispute Resolution</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      The European Commission has set up a platform for Online Dispute Resolution (ODR). This platform is
+                      intended to serve as a point of contact for the out-of-court resolution of disputes relating to contractual
+                      obligations under online sales contracts and online service contracts.
+                      <br /> The platform is provided at http://ec.europa.eu/consumers/odr/.
+                      <br />Robert Bosch GmbH does not participate in dispute resolution proceedings before consumer arbitration
+                      bodies
+                    </p>
+                    <p>
+                      The platform is provided at <a target="_blank" href="http://ec.europa.eu/consumers/odr/" rel="noopener noreferrer">
+                        <span class="A-Link__linkText">http://ec.europa.eu/consumers/odr/</span>
+                      </a>.
+                    </p>
+                    <p>Robert Bosch GmbH does not participate in dispute resolution proceedings before consumer arbitration bodies.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Data protection notice" class="font-paragraph">
+          <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+            <br>
+            <br>
+
+            <p>
+              <b class="font-weight-bold">
+                Politique de confidentialité relative l’application Bosch SAM
+              </b>
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Bosch respecte votre vie privée
+              </b>
+            </p>
+
+            <p>
+              Nous respectons votre vie privée et nous nous engageons à la protéger.
+              <br />La présente déclaration reflète la culture du et manifeste sa volonté de promouvoir une collecte et une utilisation de vos données loyales, responsables et sécurisées.
+
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Responsable du traitement
+              </b>
+            </p>
+
+            <p>
+              Le responsable du traitement de vos données est l'entité légale du Groupe Bosch avec lequel vous êtes sous contrat.
+              Ses coordonnées figurent sur votre contrat de travail.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Collecte, traitement et utilisation des données personnelles/ Catégories de données faisant l’objet d’un traitement
+              </b>
+            </p>
+
+            <p>
+              Nous collectons les catégories de données suivantes à l’occasion de l’utilisation de cette application :
+            </p>
+
+
+            <ul>
+              <li>
+                Données d’identification
+                <ul>
+                  <li>Nom, prénom, matricule du personnel</li>
+                  <li>Adresse email, téléphone portable (données optionnelles)</li>
+                </ul>
+              </li>
+
+              <li>
+                Données de santé
+
+                <ul>
+                  <li>Photo du volet employeur de l’arrêt de travail intégralement rempli </li>
+                </ul>
+              </li>
+            </ul>
+
+
+
+
+            <p>
+              <b class="font-weight-bold">
+                Définition des données personnelles
+              </b>
+            </p>
+
+            <p>
+              Les données personnelles sont toute information qui se rapporte à une personne physique identifiée ou identifiable (ex : nom, prénom, adresse postale et email, téléphone portable, photographie, ses données de santé physique ou mentale, la prestation de services de santé, et/ou toute autre information sur son état de santé).
+              <br /> Nous collectons, traitons et utilisons des données à caractère personnel (y compris des adresses IP) uniquement sur une base légale ou si vous avez donné votre consentement pour le traitement ou l'utilisation de vos données à caractère personnel comme pour cette application.
+
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Finalités et bases légales
+              </b>
+            </p>
+
+            <p>
+              Vos données sont collectées pour les finalités et sur les bases légales suivantes :
+            </p>
+
+            <ul>
+              <li>Collecte et transmission de l’arrêt de travail (obligation légale)</li>
+              <li>Administration technique de l’application (intérêts légitimes de l’entreprise)</li>
+              <li>Sauvegarde et défense de nos droits (base légale : intérêts légitime de défendre nos droits)</li>
+              <li>Gestion de l’exercice de vos droits (base légale : obligation légale)</li>
+            </ul>
+
+
+
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Transfert des données
+              </b>
+            </p>
+
+            <p>Transfert des données dans le Groupe Bosch</p>
+
+            <p style="margin-left:10px;">
+              Nous partageons vos données personnelles avec d’autres entités du Groupe Bosch (HRL locale, GS/HRS-FR). Seules les personnes habilitées par
+              leur mission et/ou fonctions ont accès aux données, notamment votre supérieur hiérarchique pour la période d’absence.
+            </p>
+
+            <p> Transfert à d’autres responsables de traitement</p>
+
+            <p class="text-marging-10">
+              Nous sommes susceptibles de communiquer vos données personnelles à d’autres responsables de traitement dans le cadre d’une obligation légale et/ou contractuelle, en cas de réquisition administration et/ou judiciaire, dans notre intérêt légitime ou celui d’un tiers ou encore lorsque vous donnez votre consentement.
+              <br />Vous trouverez les informations nécessaires dans la section Finalités et bases légales du traitement.
+            </p>
+
+            <p>Prestataires de service</p>
+
+            <p class="text-marging-10">
+              Nous sommes susceptibles de confier certaines missions à des prestataires de services externes telles que la programmation, la maintenance et l’assistance.
+              <br />Le choix de ces prestataires de services est effectué avec le plus grand soin et nous nous engageons à contrôler régulièrement la façon dont sont traitées et sécurisées les données que nous leur confions et stockées dans leurs locaux. Les prestataires peuvent être des entités du Groupe Bosch.
+              <br />La gestion de l’application a été confiée à
+              <br />Robert Bosch Engineering and Business solutions Private Limited
+              <br />123, Ind. Layout, Hosur Road, Koramangala,
+              <br /> 560095 Bangalore, India.
+              <br />Contact details: + 91 80665 75757
+
+            </p>
+
+            <p>Transmission à des destinataires hors de l’Espace économique européen (EEE)</p>
+            <p class="text-marging-10">
+              Nous sommes également susceptibles de transmettre vos données à des destinataires en dehors de l’Union européenne, appelés pays tiers.
+              <br /> Dans ce cas, nous nous assurons, avant le transfert, que le pays tiers dispose d’un niveau de protection des données approprié (ex : sur la base d’une décision d’adéquation validée par la Commission européenne ou des clauses contractuelles types) ou encore sur la base de votre consentement.
+              <br />Vous pouvez obtenir la liste des destinataires situés dans des pays tiers ainsi une copie des dispositions contractuelles assurant un niveau de protection des données approprié. Veuillez-vous reporter à la Section 1 Responsable de traitement.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Durée de conservation
+              </b>
+            </p>
+
+            <p>
+              Vos données sont conservées 3 mois sur l’interface utilisateur de HRS sauf prescriptions légales contraires
+              (ex : en matière de maladie professionnelle, aggravation accident de travail…). Les arrêts de travail seront conservés
+              le temps nécessaire à leur gestion.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Utilisation de l’application mobile
+              </b>
+            </p>
+            <p>
+              En plus de nos Offres en ligne, nous proposons des applications mobiles ("Applications") que vous pouvez télécharger sur votre appareil mobile.
+              En plus des données collectées sur nos Sites internet, nous collectons vos données personnelles via nos applications attachées spécifiquement
+              à l'utilisation d'un terminal mobile. Cette collecte repose sur votre consentement exprès.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Traitement des données par les opérateurs d'App Store </b></p>
+
+            <p>
+              Nous ne sommes pas responsables des traitements mis en place avec vos données personnelles
+              (le nom d’utilisateur, adresse email et identifiant du terminal utilisé) par les opérateurs d’App Store lors du
+              téléchargement d’une application (ex. Google Play de Google, App Store d'Apple, Galaxy Apps Store de Samsung).
+              Nous vous invitions à consulter la Politique de confidentialité de ses Prestataires.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Cookies</b></p>
+            <p>
+              Notre Offre en ligne n’utilise aucune Cookies.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Plugins </b></p>
+
+            <p>
+              Nos offres utilisent le plugin "Google ReCaptcha" afin de garantir le bon fonctionnement de l'application.
+              <br />Le plugin est une extension indépendante du Prestataire Google localisé aux Etats-Unis utilisée pour autoriser les notifications des personnes physiques à l’exclusion de celles d’automates comme les robots. Le plugin transmet des informations sur vos matériel, logiciel, terminal et application ainsi que le résultat de la demande de sécurité.
+              <br /> En utilisant le plugin, votre navigateur Internet se connecte au serveur du Prestataire et communique des informations sur la page cliquée, le matériel et logiciel, le terminal et le résultat de la demande de sécurité.  Les fichiers journaux, y compris l'adresse IP, sont directement transmis par votre navigateur Internet au serveur du Prestataire et sont enregistrés. Le Prestataire, ses serveurs inclus, peuvent se trouver en dehors de l'UE ou de l'EEE (ex. États-Unis).
+              <br />Par défaut, les plugins sont désactivés lorsque vous visitez nos sites internet. Les plugins s’activent lorsque vous cliquez sur le bouton.
+              <br /> Si vous ne souhaitez pas que les Prestataires collectent et utilisent vos données, ne cliquez pas sur les plugins.
+              <br />Nous ne sommes pas responsables des données collectées et utilisées par le Prestataire via ses plugins. Nous vous recommandons de consulter la politique de confidentialité du Prestataire pour en savoir plus.
+
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Sécurité </b></p>
+            <p>
+              Tous nos collaborateurs et nos prestataires de services sont soumis à une obligation de confidentialité et de respect de la législation en vigueur en matière de protection de données.
+              <br />Nous prenons toutes les mesures techniques et organisationnelles nécessaires pour assurer la sécurité, la protection de vos données personnelles et prévenir les risques de destruction accidentelle ou illégale, manipulation, perte, modification, divulgation ou d’accès non autorisée et ce conformément à l’état de l’art.
+
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Droits des personnes </b></p>
+
+            <p>
+              Veuillez-vous assurer au moment de l’exercice de vos droits que votre identité soit clairement établie.
+              <br /> Pour faire valoir vos droits, veuillez utiliser les coordonnées fournies dans la section Contact.
+
+            </p>
+
+            <p>Droit d’information et droit d’accès</p>
+            <p class="text-marging-10">Vous disposez d’un droit d’information sur le traitement en cours de vos données et le cas échéant un droit d’accès sur celles-ci.</p>
+
+            <p>Droit de rectification, suppression et mise à jour</p>
+
+            <p class="text-marging-10">
+              Vous avez le droit d’obtenir de notre part la rectification de vos données personnelles inexactes, leur mise à jour ainsi que leur
+              effacement à l’exclusion des données soumises à prescription légale notamment les données de facturation ou de comptabilité.
+              <br />Dans ce cas, le traitement sera limité (voir ci-après).
+            </p>
+
+            <p>Droit à la limitation</p>
+            <p class="text-marging-10">
+              Vous avez le droit d’obtenir de notre part la limitation du traitement dans les cas limitativement prévus par la loi.
+            </p>
+
+            <p>Droit d’opposition au traitement</p>
+            <p class="text-marging-10">
+              Vous disposez du droit de vous opposer, à tout moment, à ce que vos données fassent l’objet d’un traitement à des fins de prospection commerciale, et ce sans motif et sans frais, ou de vous opposer sur la base d’un intérêt légitime dans la limite des cas prévus par la loi.
+              <br />Dans ce dernier cas, nous cesserons de traiter vos données sauf s’il existe des motifs légitimes et impérieux pour que nous poursuivions le traitement, ou pour la défense de nos droits.
+
+            </p>
+
+            <p>Droit de retrait</p>
+
+            <p class="text-marging-10">
+              Vous disposez du droit de retirer votre consentement à tout moment.
+              Le retrait du consentement ne compromet pas la licéité du traitement fondé sur le consentement effectué avant ce retrait.
+            </p>
+
+
+            <p>Droit à la portabilité</p>
+
+            <p class="text-marging-10">
+              Vous disposez du droit à la portabilité. Le droit à la portabilité se distingue du droit d’accès qui s’exerce sur l’ensemble de vos données.
+              <br />Le droit à la portabilité ne s’exerce que sur les données que vous nous fournissez et traitées sur la base de votre consentement ou de l’exécution du contrat.
+            </p>
+
+            <p>Droit de donner des directives sur le sort de ses données</p>
+
+            <p class="text-marging-10">
+              Vous disposez du droit de définir des directives relatives à la conservation, à l’effacement et la communication de vos données à caractère personnel après votre décès.
+              <br /> Vous avez ainsi le droit d’organiser le sort de vos données post-mortem dans le respect de la loi n°2016-1321 du 7 octobre 2016 pour une République numérique.
+
+            </p>
+
+            <p>Droit d’introduire une réclamation</p>
+
+            <p class="text-marging-10">
+
+              Vous disposez également du droit d’introduire une réclamation auprès de l’autorité de contrôle, la CNIL
+              (Commission Nationale Informatique et Libertés), à l’adresse postale suivante : CNIL, 3 place de Fontenoy TSA 80715,
+              Paris(75334) ou par email : <a target="_blank" href="https://www.cnil.fr/fr/agir" rel="noopener noreferrer">https://www.cnil.fr/fr/agir  </a>
+            </p>
+
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Mise à jour </b></p>
+            <p>
+              Nous sommes susceptibles de mettre à jour notre politique de confidentialité au regard des progrès techniques et technologiques.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Contact </b></p>
+            <p>
+              <br /> Pour nous contacter, vous trouverez notre adresse dans votre contrat de travail.
+              <br /> Pour faire valoir vos droits et signaler les incidents liés à la protection des données, veuillez suivre le lien suivant : <a target="_blank" href="https://www.bkms-system.net/bosch-dataprotection" rel="noopener noreferrer">
+                https://www.bkms-system.net/bosch-dataprotection
+              </a>
+              <br /> Pour l’exercice de vos droits (réclamation, suggestion), vous pouvez contacter notre délégué à la protection des données en précisant l’objet de la demande « droit des personnes » :
+              <br /> Délégué du Groupe à la protection des données
+              <br /> Sécurité de l’information et protection des données du Groupe Bosch (C/ISP)
+              <br />Robert Bosch GmbH
+              <br /> Postbox 30 02 20
+              <br /> 70442 Stuttgart
+              <br /> GERMANY
+
+            </p>
+
+
+
+            <p>
+              ou <br>
+              <a target="_blank" href="DPO@bosch.com " rel="noopener noreferrer">
+                <span class="A-Link__linkText">DPO@bosch.com </span>
+              </a>
+            </p>
+
+            <p><b class="font-weight-bold">Date d’effectivité de la Politique de Confidentialité</b> </p>
+            <p>La présente politique de confidentialité est effective depuis le 1er juin 2021.</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="FOSS Licenses" class="font-paragraph">
+          <div id="Foss-Licenses" class="tabcontent Text_Font">
+            <br />
+            <p><b>FOSS Packages & Licenses</b></p>
+            <app-foss-license></app-foss-license>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <!--<hr>-->
+    </div>
+  </div>
+  <!--start po-->
+  <div *ngIf="selectedCountry=='portugal' && selectedlanguage=='po'">
+    <div class=" col-xs-12 font-paragraph">
+      <mat-tab-group mat-stretch-tabs class="col-xs-12" (selectedTabChange)="tabChangeEventForPO($event)">
+        <mat-tab mat-ink-bar label="Informação Corporativa">
+          <div id="Corporateinformation" class="tabcontent Text_Font font-paragraph">
+            <div class="M-Text-Monolith__description">
+              <div class="A-Text-RichText">
+                <br>
+                <br>
+                <p>
+                  <b class="font-weight-bold ">Pessoa Responsável pela Aplicação/ Designação do Departamento</b>
+                </p>
+                <p>
+                  <b class="font-weight-bold">
+                    José Carvalho / Serviços de RH Bosch Portugal
+                  </b>
+                </p>
+                <p>
+                  GS/HRS-PO
+                  <br />Rua Max Grunding, Nº35 Lomar e Arcos
+                  <br />4705-820 Braga
+                  <br />Portugal
+
+                </p>
+
+                <p>
+                  <a target="_blank" href="hrservicept@pt.bosch.com" rel="noopener noreferrer">
+                    <span class="A-Link__linkText">hrservicept@pt.bosch.com </span>
+                  </a>
+                  <br>+351 800106633
+                </p>
+
+                <P><b class="font-weight-bold">Informação legal e corporativa</b></P>
+
+                <p><b class="font-weight-bold">Nome e Endereço</b></p>
+                <p>Bosch Car Multimédia Portugal S.A.<br />Apartado 2458<br>4701-970 Braga<br />Portugal</p>
+
+                <p><b class="font-weight-bold">Membros do Conselho de Administração</b></p>
+                <p>
+                  Dr. Volkmar Denner, Prof. Dr. Stefan Asenkerschbaumer, Dr. Michael Bolle, Dr.
+                  Christian Fischer, Dr. Stefan Hartung, Dr. Markus Heyn, Harald Kröger, Christoph
+                  Kübel, Rolf Najork, Uwe Raschke, Peter Tyroller
+                </p>
+                <p><b class="font-weight-bold">O teu contacto na Bosch</b></p>
+                <p>
+                  <a target="_blank" href="mailto:kontakt@bosch.de" rel="noopener noreferrer"><span class="A-Link__linkText">kontakt@bosch.de</span></a>
+                  <br>+49 711 400 40990
+                </p>
+                <p><b class="font-weight-bold">Registo de permissão</b></p>
+                <p>Tribunal de Registo: District Court Stuttgart HRB 14000</p>
+                <p><b class="font-weight-bold">Número de Identificação de Pessoa Coletiva</b></p> <p>DE811128135</p>
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Informação legal" class="font-paragraph">
+          <div id="Legalnotice" class="tabcontent Text_Font">
+
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <br>
+                  <br>
+                  <b class="font-weight-bold">Copyright (©)</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+
+                    <p>
+                      Todos os conteúdos neste website (especialmente textos, imagens, gráficos,
+                      sons, animações e vídeos) e o posicionamento no Websites da Bosch estão
+                      sujeitos à proteção de Copyright e a outras leis de proteção. O conteúdo deste
+                      website não deve ser copiado sem o consentimento dos seus legítimos
+                      proprietários, tal como não devem disponibilizado a terceiros com o intuito de
+                      uso para efeitos comerciais
+                    </p>
+
+                    <p>
+                      <b class="font-weight-bold">Registo</b>
+                    </p>
+
+                    <p class="M-Text-Monolith__description A-Text-RichText">
+                      Sem qualquer outra indicação, os registos de marca usados nos nossos sites são
+                      propriedade intelectual da Robert Bosch GmbH, Alemanha.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold">Registo</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      <br />Sem qualquer outra indicação, os registos de marca usados nos nossos sites são
+                      propriedade intelectual da Robert Bosch GmbH, Alemanha.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold"> Nenhuma licença ou autorização</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Não há qualquer licença ou autorização de uso da propriedade intelectual (em
+                      particular as patentes, marcas, e copyright) das companhias do Grupo Bosch
+                      (Bosch) ou para a propriedade intelectual de terceiros presentes neste website.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <b class="font-weight-bold"> Informação acerca da solução de disputas online</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      A comissão europeia estabeleceu uma Plataforma de solução de disputas online
+                      (ODR). Esta plataforma é destinada para servir como ponto de contacto para
+                      resolução de disputas relacionadas com obrigações contratuais relativas aos
+                      contratos de vendas online e contratos de serviços online, sem ser necessário o
+                      recurso aos tribunais.
+                    </p>
+                    <p>
+                      A plataforma disponível é  <a target="_blank" href="http://ec.europa.eu/consumers/odr/" rel="noopener noreferrer">
+                        <span class="A-Link__linkText">http://ec.europa.eu/consumers/odr/</span>
+                      </a>.
+                    </p>
+                    <p>
+                      A Robert Bosch GmbH não participa em procedimentos de resolução de
+                      disputas antes da participação dos organismos arbitrais.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Informação de proteção de dados" class="font-paragraph">
+          <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+            <br>
+            <br>
+
+            <p>
+              <b class="font-weight-bold">
+                Politica de privacidade para a aplicação Bosch SAM
+              </b>
+            </p>
+
+            <p>
+              Neste aviso de proteção de dados, informamos sobre o tratamento dos seus dados pessoais durante a utilização do aplicativo Bosch SAM
+              para a transmissão do certificado de incapacidade para o trabalho ao seu empregador dentro do grupo Bosch.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Bosch respeita a sua privacidade
+              </b>
+            </p>
+
+            <p>
+              A proteção da sua privacidade durante o tratamento de dados pessoais é uma parte fundamental da nossa política corporativa. Os dados pessoais
+              que são obtidos durante a sua visita às nossas ofertas online são tratados de forma confidencial e de acordo com as disposições legais.
+              <br />
+              A proteção de dados e a segurança da informação fazem parte da nossa política empresarial.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Responsável
+              </b>
+            </p>
+
+            <p>
+              A respectiva entidade legal do grupo Bosch com o qual tem um contrato de trabalho é responsável
+              pelo tratamento dos seus dados. Encontrará os dados de contacto desta pessoa jurídica do grupo Bosch no seu contrato de trabalho.
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Obtenção, tratamento e utilização de dados pessoais
+                Os dados pessoais que obtemos através desta oferta online são:
+
+              </b>
+            </p>
+            <p>
+              As seguintes categorias são as principais categorias de dados pessoais tratados:
+            </p>
+
+            <p>
+              •&nbsp;&nbsp;&nbsp;&nbsp;Primeiro nome <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Apelido<br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número pessoal <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Endereço de e-mail (campo opcional) <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número de telemóvel (campo opcional)<br />
+            </p>
+
+            <p>
+              Isto também inclui o tratamento de categorias especiais de dados pessoais, como dados de saúde. Consiste particularmente:
+            </p>
+            <p>- Foto do certificado de incapacidade para o trabalho</p>
+
+            <p>- Detalhes mencionados no certificado de incapacidade para o trabalho</p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                O que são dados pessoais:
+              </b>
+            </p>
+
+            <p>
+              Os dados pessoais consistem em toda a informação relacionada com uma pessoa identificada ou facilmente identificável, por exemplo,
+              nome, morada, número de telemóvel, e-mail, dados contratuais principais, contabilísticos e de pagamento, etc… que de certa forma
+              expressam a identidade da pessoa.<br />
+              Os dados de saúde são dados pessoais, que se relacionam com a saúde física ou mental de uma pessoa singular, incluindo a prestação de serviços
+              de saúde, e que fornecem informações sobre o seu estado de saúde.Obtemos, tratamos e utilizamos dados pessoais (incluindo endereços IP) apenas
+              quando existe uma base legal para tal ou quando o interessado nos tenha comunicado o seu consentimento ao tratamento ou utilização de tais dados
+              pessoais, por exemplo, através de registo.<br />
+
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Finalidade do tratamento e bases legais
+              </b>
+            </p>
+
+            <p>
+              A Bosch e os subcontratantes que tratem dados pessoais por conta da Bosch tratarão os seus dados pessoais com as seguintes finalidades e com base nas seguintes bases legais:
+              O tratamento tem por objetivo transmitir um certificado de incapacidade para o trabalho, que processamos para poder cumprir as nossas obrigações legais, nomeadamente nas áreas do direito do trabalho e da segurança social (base jurídica: obrigação legal).
+              <br />
+              Adicionalmente, tem a opção de introduzir dados de contacto privados para receber notificações do processo (base legal: consentimento).
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Destinatários dos seus dados pessoais dentro de uma entidade jurídica
+              </b>
+            </p>
+            <p>
+              Apenas pessoas e organizações autorizadas (por exemplo, HRL local, GS/HRS-PO) dentro da entidade jurídica do grupo Bosch com o qual
+              tem um contrato de trabalho, receberão os seus dados pessoais para as finalidades de processamento acima referidas. O seu respetivo
+              supervisor será informado do período da sua ausência de acordo com o seu certificado de incapacidade para o trabalho.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência de dados para outros responsáveis </b></p>
+            <p>Os seus dados pessoais apenas serão transferidos a outros responsáveis quando:</p>
+            <ul>
+              <li>For necessário para o cumprimento de um contrato</li>
+              <li>
+                A Bosch ou a outra parte responsável tenham um interesse legítimo na transferência,
+                caso em que tal será indicado na presente política de privacidade,
+              </li>
+              <li>O tiver consentido ou,</li>
+              <li>Nos vejamos obrigados a tal por força de disposição legal ou ordem judicial.</li>
+
+            </ul>
+
+
+            <p>	<b class="font-weight-bold">Prestadores de serviços </b></p>
+            <p>
+              A Bosch pode contratar a empresas de serviços externas tarefas como programação, manutenção e suporte. Estas empresas de serviços são
+              selecionadas cuidadosamente e supervisionadas com regularidade, prestando especial atenção ao nível de segurança e ao uso de medidas
+              e organizativas adequadas à proteção dos dados pessoais que conservam.
+              <br />
+              Exigimos a todas as empresas de serviços com as quais trabalhamos que respeitem a confidencialidade e cumpram as suas obrigações legais.
+              <br />
+              Informamos que, quando nos referimos a empresas de serviços, estas também podem ser outras empresas do Grupo Bosch.
+              <br />
+              Os prestadores de serviços são:
+              <br />
+              Quando o responsável (de acordo com o seu contrato de trabalho) não é a Robert Bosch GmbH a gestão da aplicação foi confiada a:
+              <br />
+              Robert Bosch Engineering and Business solutions Private Limited,
+              <br />
+              123, Ind. Layout, Hosur Road, Koramangala, <br />560095 Bangalore, India. <br />Detalhes do contato: + 91 80665 75757
+            </p>
+            <br />
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência a destinatários fora do Espaço Económico Europeu (EEE) </b></p>
+            <p>
+              Em determinados casos, transferimos dados pessoais a responsáveis cuja sede se encontra fora do Espaço Económico Europeu(EEE),
+              que chamados “países terceiros”, caso em que, previamente à transferência dos dados, assegurar-nos-emos de que o destinatário possui
+              um nível de proteção adequado ou que consentiu a transferência.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Duração do armazenamento dos dados pessoais e períodos de conservação  </b></p>
+
+            <p>
+              Por norma os seus dados serão guardados sempre que seja necessário para o cumprimento da finalidade para a qual foram obtidos e
+              quando tivermos de os manter para cumprir determinadas obrigações legais (por exemplo, em virtude das leis comerciais e fiscais existem
+              determinados documentos, como contratos ou faturas, que somos obrigados a guardar durante o período estabelecido por lei). O período
+              de retenção dos seus dados é de 5 anos.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Utilização das nossas aplicações móveis </b></p>
+            <p>
+              Além das nossas Ofertas Online, oferecemos aplicações móveis ("Apps"), que pode descarregar para o seu dispositivo móvel.
+              Além dos dados recolhidos nos websites, recolhemos dados pessoais adicionais através das nossas apps que resultam especificamente
+              do uso de um dispositivo móvel. Isto está sujeito ao seu consentimento prévio.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Dados tratados pelos operadores da App Store </b></p>
+            <p>
+              Não somos responsáveis e encontra-se fora do âmbito da nossa responsabilidade os casos em que os dados, como o nome do utilizador,
+              o e-mail e os identificadores individuais dos dispositivos são transmitidos a uma app store (por exemplo: Google Play da Google,
+              App store da Apple ou Galaxy Apps store), quando se descarrega a aplicação.
+              A Bosch não possui influência no que diz respeito à recolha e ao tratamento destes dados pessoais pela App Store enquanto responsável.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Plugins sociais </b></p>
+            <p>
+              Nas nossas Ofertas Online utilizamos o plugin “Google ReCaptcha” a fim de assegurar um bom funcionamento da aplicação. <br />
+              Prestador de serviços: Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <br />
+              O plugin é usado para evitar notificações de processos automatizados (por exemplo, robôs) e, portanto, apenas para permitir notificações de pessoas.<br />
+              O plugin transmite informações de hardware e software, dados de dispositivos e aplicações e o resultado da consulta de segurança. <br />
+              Ao utilizar o plugin, o seu navegador de Internet estabelece uma ligação direta aos servidores do fornecedor. Isto fornece ao fornecedor
+              a informação de que o seu navegador de Internet ligou para a página correspondente da nossa Oferta Online, bem como informações de
+              hardware e software, dados do dispositivo e o resultado da consulta de segurança. Os ficheiros de registo (incluindo o endereço IP)
+              são transmitidos do seu navegador de Internet diretamente para um servidor do respetivo fornecedor e guardados no mesmo se necessário.
+              O fornecedor ou o seu servidor podem estar localizados fora da UE ou EEE (por exemplo, nos EUA).<br />
+              Os plugins são extensões independentes dos fornecedores de redes sociais. Por esta razão, a Bosch não tem qualquer controlo sobre
+              os dados pessoais por eles obtidos e armazenados. <br />
+              O propósito e a extensão dos dados obtidos, bem como o tratamento e a utilização dos mesmos pelas redes sociais, bem como os seus
+              direitos e as opções para proteger a sua privacidade podem ser encontrados nas políticas de privacidade de cada rede social. <br />
+
+              Caso não deseje que os fornecedores dessas redes sociais recebam e, se possível, armazenem e utilizem os seus dados, não deverá utilizar os plugins.
+              Protegemo-lo do facto de que a sua visita ao nosso website é gravada e avaliada por fornecedores de plugins por padrão.
+              Quando visita uma página no nosso site que contém esses plugins, estes são inicialmente desativados. Os plugins só são ativados quando
+              clica no botão fornecido.
+
+            </p>
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Segurança  </b></p>
+            <p>
+              Os nossos colaboradores e fornecedores externos que nos prestem serviços estão vinculados a obrigações de confidencialidade e a cumprir
+              as disposições das leis de proteção de dados aplicáveis.<br />
+              A Bosch toma todas as medidas técnicas e organizativas necessárias para assegurar um nível adequado de proteção dos dados que tratamos,
+              especialmente no que diz respeito aos riscos de destruição acidental e ilícita, manipulação, perda, alteração, divulgação ou acessos
+              não autorizados. As medidas de segurança da Bosch são constantemente atualizadas e acompanham solidamente o desenvolvimento tecnológico
+              da empresa.
+              <br />
+              As nossas medidas de segurança são melhoradas constantemente, acompanhando o desenvolvimento tecnológico.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direitos do utilizador ou afetado </b></p>
+            <p>
+              Utilize por favor os dados da secção “Contacto” para fazer valer os seus direitos. Por favor,
+              assegure-se de que nos é possível identificá-lo claramente.
+            </p>
+
+            <p>
+              <b>•	Direito de informação e acesso:</b> assiste-lhe o direito de obter da nossa parte informações relativas ao tratamento dos seus
+              dados pessoais. Para o efeito, poderá exercer o seu direito de acesso aos seus dados pessoais por nós tratados.
+            </p>
+            <p>
+              <b>•	Direito de retificação e apagamento:</b> tem o direito de obter a retificação, sem atrasos indevidos, de dados pessoais inexatos
+              que tratamos e, tendo em conta as finalidades do tratamento, tem também o direito de ter os dados pessoais incompletos, que os mesmos
+              sejam completados. Na medida em que os requisitos legais sejam cumpridos, tem o direito de obter o preenchimento ou eliminação dos
+              seus dados. Isto não se aplica quando os dados são necessários para fins de faturação ou contabilidade ou estão sujeitos a um período
+              de retenção legal. Desde que o acesso a estes dados não seja necessário, pode solicitar a limitação do tratamento dos seus dados
+              pessoais.
+            </p>
+            <p>
+              <b>•	Direito à limitação do tratamento:</b> pode exigir-nos, sempre que se cumpram os requisitos legais estabelecidos, que limitemos o
+              tratamento dos seus dados.
+            </p>
+            <p>
+              <b>•	Direito de portabilidade de dados:</b> o utilizador tem o direito a receber os dados que tenham sido fornecidos à Bosch num formato
+              estruturado, de uso corrente, que permita a leitura pelo computador ou, se for tecnicamente viável, exigir a transferência de tais dados
+              a um terceiro.
+            </p>
+            <p>
+              <b>Retirada do consentimento:</b> sempre que tenha consentido o tratamento dos seus dados, poderá retirar esse consentimento a qualquer
+              momento utilizando seguinte endereço de e-mail:
+              <a target="_blank" href="hrservicept@pt.bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">hrservicept@pt.bosch.com</span>
+              </a> A legalidade do tratamento dos seus dados até à retirada do consentimento não será afetada.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direito de reclamação às autoridades de controlo </b></p>
+            <p>
+              Tem o direito de apresentar reclamações perante as Autoridades competentes. Para tal, pode dirigir-se às autoridades de proteção de
+              dados competentes da sua cidade ou região, ou às autoridades de proteção de dados competentes para a Bosch, isto é:
+            </p>
+
+            <br />
+            <p>
+              Comissão Nacional de Proteção de Dados<br />
+              Av. D. Carlos I, 134 - 1.º <br />
+              1200-651 Lisboa / Portugal <br />
+              Tel: +351 213928400 / Fax: +351 213976832 / e-mail: geral@cnpd.pt<br />
+
+
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Aviso de alteração das medidas de proteção de dados  </b></p>
+            <p>
+              Reservamo-nos o direito de alterar as nossas medidas de segurança e de proteção de dados sempre que seja necessário devido ao
+              desenvolvimento técnico. Nestes casos, também adaptaremos, consoante o caso, as nossas políticas de proteção de dados. Por isso,
+              queira por favor ter em conta as atualizações da política de privacidade.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Contato </b></p>
+
+            <p>
+              Caso deseje contatar-nos, encontra a morada indicada na seção "Responsável".
+              Para exercer os seus direitos mencionados no título “Direitos do utilizador ou afetado” use o seguinte
+              link: <a target="_blank" href="https://request.privacy-bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://request.privacy-bosch.com</span>
+              </a>
+              <br />
+              Para notificar violações de segurança, use o seguinte
+              link:<a target="_blank" href="https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng"
+                      rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng</span>
+              </a>
+              <br />
+              Para saber mais sobre os seus direitos, para sugestões e reclamações relacionadas com o tratamento dos seus dados pessoais, queira por
+              favor dirigir-se ao nosso responsável de proteção de dados do grupo:
+              <br />
+              Data Protection Officer<br />
+              Information Security and Privacy (C/ISP)<br />
+              Robert Bosch GmbH<br />
+              Post office box 30 02 20<br />
+              70 442 Stuttgart, Germany<br />
+              E-mail: <a target="_blank" href="dpo@bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">dpo@bosch.com</span>
+              </a>
+
+            </p>
+
+
+            <p><b class="font-weight-bold">Data efetiva</b></p>
+            <p>1 de setembro de 2021</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="FOSS Licenses" class="font-paragraph">
+          <div id="Foss-Licenses" class="tabcontent Text_Font">
+            <br />
+            <p><b>FOSS Packages & Licenses</b></p>
+            <app-foss-license></app-foss-license>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <!--<hr>-->
+    </div>
+  </div>
+
+  <!--start po-english-->
+  <div *ngIf="selectedCountry=='portugal' && selectedlanguage!='po'">
+    <div class=" col-xs-12 font-paragraph">
+      <mat-tab-group mat-stretch-tabs class="col-xs-12" (selectedTabChange)="tabChangeEvent($event)">
+        <mat-tab mat-ink-bar label="Corporate information">
+          <div id="Corporateinformation" class="tabcontent Text_Font font-paragraph">
+            <div class="M-Text-Monolith__description">
+              <div class="A-Text-RichText">
+                <br>
+                <br>
+                <p>
+                  <b class="font-weight-bold ">App Responsible person / department designation</b>
+                </p>
+                <p>
+                  <b class="font-weight-bold">
+                    José Carvalho / Serviços de RH Bosch Portugal
+                  </b>
+                </p>
+                <p>
+                  GS/HRS-PO
+                  <br>Rua Max Grunding, Nº35 Lomar e Arcos
+                  <br>4705-820 Braga
+                  <br>Portugal
+                  <br />hrservicept@pt.bosch.com
+                  <br />+351 800106633
+
+                </p>
+                <P><b class="font-weight-bold">Corporate and legal information</b></P>
+
+                <p><b class="font-weight-bold">Name and address</b></p>
+                <p>Bosch Car Multimédia Portugal S.A.<br />Apartado 2458<br />4701-970 Braga<br />GERMANY<br />Portugal</p>
+
+                <p><b class="font-weight-bold">Members of the Board of Management</b></p>
+                <p>
+                  Dr. Volkmar Denner, Prof. Dr. Stefan Asenkerschbaumer, Dr. Michael Bolle, Dr.
+                  Christian Fischer, Dr. Stefan Hartung, Dr. Markus Heyn, Harald Kröger,
+                  Christoph Kübel, Rolf Najork, Uwe Raschke, Peter Tyroller
+                </p>
+                <p><b class="font-weight-bold">Your contact at Bosch</b></p>
+                <p>
+                  <a target="_blank" href="mailto:kontakt@bosch.de" rel="noopener noreferrer"><span class="A-Link__linkText">kontakt@bosch.de</span></a>
+                  <br>+49 711 400 40990
+                </p>
+                <p><b class="font-weight-bold">Register Entries</b></p>
+                <p>Registration Court: District Court Stuttgart HRB 14000</p>
+                <p><b class="font-weight-bold">Value-added tax identification number</b></p> <p>DE811128135</p>
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Legal notice" class="font-paragraph">
+          <div id="Legalnotice" class="tabcontent Text_Font">
+
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <br>
+                  <br>
+                  <b class="font-weight-bold">Copyright (©)</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+
+                    <p>
+                      All the content of this website (especially text, images, graphics, sound,
+                      animations, and videos) and the positioning thereof in Bosch websites is
+                      subject to copyright protection and to other protection laws. Without the
+                      consent of the respective rights owner, the content of these websites may not
+                      be copied, disseminated, modified, or made accessible to third parties for
+                      commercial purposes.
+                    </p>
+
+                    <p>
+                      <b class="font-weight-bold">Trademarks</b>
+                    </p>
+                    <p class="M-Text-Monolith__description A-Text-RichText">
+                      Unless otherwise indicated, the trademarks used on our sites are the
+                      intellectual property of Robert Bosch GmbH, Germany.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold">Trademarks</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Unless otherwise indicated, the trademarks used on our sites are the
+                      intellectual property of Robert Bosch GmbH, Germany.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold"> No license</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      No license to use the intellectual property (in particular the patents,
+                      trademarks, and copyrights) of companies in the Bosch Group (Bosch) or of
+                      third parties is granted by way of this website.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <b class="font-weight-bold"> Information on Online Dispute Resolution</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      The European Commission has set up a platform for Online Dispute Resolution
+                      (ODR). This platform is intended to serve as a point of contact for the out-ofcourt resolution of disputes relating to contractual obligations under online
+                      sales contracts and online service contracts.
+                      <br /> The platform is provided at http://ec.europa.eu/consumers/odr/.
+                      <br />Robert Bosch GmbH does not participate in dispute resolution proceedings
+                      before consumer arbitration bodies
+                    </p>
+                    <p>
+                      The platform is provided at <a target="_blank" href="http://ec.europa.eu/consumers/odr/" rel="noopener noreferrer">
+                        <span class="A-Link__linkText">http://ec.europa.eu/consumers/odr/</span>
+                      </a>.
+                    </p>
+                    <p>Robert Bosch GmbH does not participate in dispute resolution proceedings before consumer arbitration bodies.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Data protection notice" class="font-paragraph">
+          <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+            <br>
+            <br>
+
+            <p>
+              <b class="font-weight-bold">
+                Politica de privacidade para a aplicação Bosch SAM
+              </b>
+            </p>
+
+            <p>
+              Neste aviso de proteção de dados, informamos sobre o tratamento dos seus dados pessoais durante a utilização do aplicativo Bosch SAM
+              para a transmissão do certificado de incapacidade para o trabalho ao seu empregador dentro do grupo Bosch.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Bosch respeita a sua privacidade
+              </b>
+            </p>
+
+            <p>
+              A proteção da sua privacidade durante o tratamento de dados pessoais é uma parte fundamental da nossa política corporativa. Os dados pessoais
+              que são obtidos durante a sua visita às nossas ofertas online são tratados de forma confidencial e de acordo com as disposições legais.
+              <br />
+              A proteção de dados e a segurança da informação fazem parte da nossa política empresarial.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Responsável
+              </b>
+            </p>
+
+            <p>
+              A respectiva entidade legal do grupo Bosch com o qual tem um contrato de trabalho é responsável
+              pelo tratamento dos seus dados. Encontrará os dados de contacto desta pessoa jurídica do grupo Bosch no seu contrato de trabalho.
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Obtenção, tratamento e utilização de dados pessoais
+                Os dados pessoais que obtemos através desta oferta online são:
+
+              </b>
+            </p>
+            <p>
+              As seguintes categorias são as principais categorias de dados pessoais tratados:
+            </p>
+
+            <p>
+              •&nbsp;&nbsp;&nbsp;&nbsp;Primeiro nome <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Apelido<br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número pessoal <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Endereço de e-mail (campo opcional) <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número de telemóvel (campo opcional)<br />
+            </p>
+
+            <p>
+              Isto também inclui o tratamento de categorias especiais de dados pessoais, como dados de saúde. Consiste particularmente:
+            </p>
+            <p>- Foto do certificado de incapacidade para o trabalho</p>
+
+            <p>- Detalhes mencionados no certificado de incapacidade para o trabalho</p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                O que são dados pessoais:
+              </b>
+            </p>
+
+            <p>
+              Os dados pessoais consistem em toda a informação relacionada com uma pessoa identificada ou facilmente identificável, por exemplo,
+              nome, morada, número de telemóvel, e-mail, dados contratuais principais, contabilísticos e de pagamento, etc… que de certa forma
+              expressam a identidade da pessoa.<br />
+              Os dados de saúde são dados pessoais, que se relacionam com a saúde física ou mental de uma pessoa singular, incluindo a prestação de serviços
+              de saúde, e que fornecem informações sobre o seu estado de saúde.Obtemos, tratamos e utilizamos dados pessoais (incluindo endereços IP) apenas
+              quando existe uma base legal para tal ou quando o interessado nos tenha comunicado o seu consentimento ao tratamento ou utilização de tais dados
+              pessoais, por exemplo, através de registo.<br />
+
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Finalidade do tratamento e bases legais
+              </b>
+            </p>
+
+            <p>
+              A Bosch e os subcontratantes que tratem dados pessoais por conta da Bosch tratarão os seus dados pessoais com as seguintes finalidades e com base nas seguintes bases legais:
+              O tratamento tem por objetivo transmitir um certificado de incapacidade para o trabalho, que processamos para poder cumprir as nossas obrigações legais, nomeadamente nas áreas do direito do trabalho e da segurança social (base jurídica: obrigação legal).
+              <br />
+              Adicionalmente, tem a opção de introduzir dados de contacto privados para receber notificações do processo (base legal: consentimento).
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Destinatários dos seus dados pessoais dentro de uma entidade jurídica
+              </b>
+            </p>
+            <p>
+              Apenas pessoas e organizações autorizadas (por exemplo, HRL local, GS/HRS-PO) dentro da entidade jurídica do grupo Bosch com o qual
+              tem um contrato de trabalho, receberão os seus dados pessoais para as finalidades de processamento acima referidas. O seu respetivo
+              supervisor será informado do período da sua ausência de acordo com o seu certificado de incapacidade para o trabalho.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência de dados para outros responsáveis </b></p>
+            <p>Os seus dados pessoais apenas serão transferidos a outros responsáveis quando:</p>
+            <ul>
+              <li>For necessário para o cumprimento de um contrato</li>
+              <li>
+                A Bosch ou a outra parte responsável tenham um interesse legítimo na transferência,
+                caso em que tal será indicado na presente política de privacidade,
+              </li>
+              <li>O tiver consentido ou,</li>
+              <li>Nos vejamos obrigados a tal por força de disposição legal ou ordem judicial.</li>
+
+            </ul>
+
+
+            <p>	<b class="font-weight-bold">Prestadores de serviços </b></p>
+            <p>
+              A Bosch pode contratar a empresas de serviços externas tarefas como programação, manutenção e suporte. Estas empresas de serviços são
+              selecionadas cuidadosamente e supervisionadas com regularidade, prestando especial atenção ao nível de segurança e ao uso de medidas
+              e organizativas adequadas à proteção dos dados pessoais que conservam.
+              <br />
+              Exigimos a todas as empresas de serviços com as quais trabalhamos que respeitem a confidencialidade e cumpram as suas obrigações legais.
+              <br />
+              Informamos que, quando nos referimos a empresas de serviços, estas também podem ser outras empresas do Grupo Bosch.
+              <br />
+              Os prestadores de serviços são:
+              <br />
+              Quando o responsável (de acordo com o seu contrato de trabalho) não é a Robert Bosch GmbH a gestão da aplicação foi confiada a:
+              <br />
+              Robert Bosch Engineering and Business solutions Private Limited,
+              <br />
+              123, Ind. Layout, Hosur Road, Koramangala, <br />560095 Bangalore, India. <br />Detalhes do contato: + 91 80665 75757
+            </p>
+            <br />
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência a destinatários fora do Espaço Económico Europeu (EEE) </b></p>
+            <p>
+              Em determinados casos, transferimos dados pessoais a responsáveis cuja sede se encontra fora do Espaço Económico Europeu(EEE),
+              que chamados “países terceiros”, caso em que, previamente à transferência dos dados, assegurar-nos-emos de que o destinatário possui
+              um nível de proteção adequado ou que consentiu a transferência.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Duração do armazenamento dos dados pessoais e períodos de conservação  </b></p>
+
+            <p>
+              Por norma os seus dados serão guardados sempre que seja necessário para o cumprimento da finalidade para a qual foram obtidos e
+              quando tivermos de os manter para cumprir determinadas obrigações legais (por exemplo, em virtude das leis comerciais e fiscais existem
+              determinados documentos, como contratos ou faturas, que somos obrigados a guardar durante o período estabelecido por lei). O período
+              de retenção dos seus dados é de 5 anos.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Utilização das nossas aplicações móveis </b></p>
+            <p>
+              Além das nossas Ofertas Online, oferecemos aplicações móveis ("Apps"), que pode descarregar para o seu dispositivo móvel.
+              Além dos dados recolhidos nos websites, recolhemos dados pessoais adicionais através das nossas apps que resultam especificamente
+              do uso de um dispositivo móvel. Isto está sujeito ao seu consentimento prévio.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Dados tratados pelos operadores da App Store </b></p>
+            <p>
+              Não somos responsáveis e encontra-se fora do âmbito da nossa responsabilidade os casos em que os dados, como o nome do utilizador,
+              o e-mail e os identificadores individuais dos dispositivos são transmitidos a uma app store (por exemplo: Google Play da Google,
+              App store da Apple ou Galaxy Apps store), quando se descarrega a aplicação.
+              A Bosch não possui influência no que diz respeito à recolha e ao tratamento destes dados pessoais pela App Store enquanto responsável.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Plugins sociais </b></p>
+            <p>
+              Nas nossas Ofertas Online utilizamos o plugin “Google ReCaptcha” a fim de assegurar um bom funcionamento da aplicação. <br />
+              Prestador de serviços: Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <br />
+              O plugin é usado para evitar notificações de processos automatizados (por exemplo, robôs) e, portanto, apenas para permitir notificações de pessoas.<br />
+              O plugin transmite informações de hardware e software, dados de dispositivos e aplicações e o resultado da consulta de segurança. <br />
+              Ao utilizar o plugin, o seu navegador de Internet estabelece uma ligação direta aos servidores do fornecedor. Isto fornece ao fornecedor
+              a informação de que o seu navegador de Internet ligou para a página correspondente da nossa Oferta Online, bem como informações de
+              hardware e software, dados do dispositivo e o resultado da consulta de segurança. Os ficheiros de registo (incluindo o endereço IP)
+              são transmitidos do seu navegador de Internet diretamente para um servidor do respetivo fornecedor e guardados no mesmo se necessário.
+              O fornecedor ou o seu servidor podem estar localizados fora da UE ou EEE (por exemplo, nos EUA).<br />
+              Os plugins são extensões independentes dos fornecedores de redes sociais. Por esta razão, a Bosch não tem qualquer controlo sobre
+              os dados pessoais por eles obtidos e armazenados. <br />
+              O propósito e a extensão dos dados obtidos, bem como o tratamento e a utilização dos mesmos pelas redes sociais, bem como os seus
+              direitos e as opções para proteger a sua privacidade podem ser encontrados nas políticas de privacidade de cada rede social. <br />
+
+              Caso não deseje que os fornecedores dessas redes sociais recebam e, se possível, armazenem e utilizem os seus dados, não deverá utilizar os plugins.
+              Protegemo-lo do facto de que a sua visita ao nosso website é gravada e avaliada por fornecedores de plugins por padrão.
+              Quando visita uma página no nosso site que contém esses plugins, estes são inicialmente desativados. Os plugins só são ativados quando
+              clica no botão fornecido.
+
+            </p>
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Segurança  </b></p>
+            <p>
+              Os nossos colaboradores e fornecedores externos que nos prestem serviços estão vinculados a obrigações de confidencialidade e a cumprir
+              as disposições das leis de proteção de dados aplicáveis.<br />
+              A Bosch toma todas as medidas técnicas e organizativas necessárias para assegurar um nível adequado de proteção dos dados que tratamos,
+              especialmente no que diz respeito aos riscos de destruição acidental e ilícita, manipulação, perda, alteração, divulgação ou acessos
+              não autorizados. As medidas de segurança da Bosch são constantemente atualizadas e acompanham solidamente o desenvolvimento tecnológico
+              da empresa.
+              <br />
+              As nossas medidas de segurança são melhoradas constantemente, acompanhando o desenvolvimento tecnológico.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direitos do utilizador ou afetado </b></p>
+            <p>
+              Utilize por favor os dados da secção “Contacto” para fazer valer os seus direitos. Por favor,
+              assegure-se de que nos é possível identificá-lo claramente.
+            </p>
+
+            <p>
+              <b>•	Direito de informação e acesso:</b> assiste-lhe o direito de obter da nossa parte informações relativas ao tratamento dos seus
+              dados pessoais. Para o efeito, poderá exercer o seu direito de acesso aos seus dados pessoais por nós tratados.
+            </p>
+            <p>
+              <b>•	Direito de retificação e apagamento:</b> tem o direito de obter a retificação, sem atrasos indevidos, de dados pessoais inexatos
+              que tratamos e, tendo em conta as finalidades do tratamento, tem também o direito de ter os dados pessoais incompletos, que os mesmos
+              sejam completados. Na medida em que os requisitos legais sejam cumpridos, tem o direito de obter o preenchimento ou eliminação dos
+              seus dados. Isto não se aplica quando os dados são necessários para fins de faturação ou contabilidade ou estão sujeitos a um período
+              de retenção legal. Desde que o acesso a estes dados não seja necessário, pode solicitar a limitação do tratamento dos seus dados
+              pessoais.
+            </p>
+            <p>
+              <b>•	Direito à limitação do tratamento:</b> pode exigir-nos, sempre que se cumpram os requisitos legais estabelecidos, que limitemos o
+              tratamento dos seus dados.
+            </p>
+            <p>
+              <b>•	Direito de portabilidade de dados:</b> o utilizador tem o direito a receber os dados que tenham sido fornecidos à Bosch num formato
+              estruturado, de uso corrente, que permita a leitura pelo computador ou, se for tecnicamente viável, exigir a transferência de tais dados
+              a um terceiro.
+            </p>
+            <p>
+              <b>Retirada do consentimento:</b> sempre que tenha consentido o tratamento dos seus dados, poderá retirar esse consentimento a qualquer
+              momento utilizando seguinte endereço de e-mail:
+              <a target="_blank" href="hrservicept@pt.bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">hrservicept@pt.bosch.com</span>
+              </a> A legalidade do tratamento dos seus dados até à retirada do consentimento não será afetada.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direito de reclamação às autoridades de controlo </b></p>
+            <p>
+              Tem o direito de apresentar reclamações perante as Autoridades competentes. Para tal, pode dirigir-se às autoridades de proteção de
+              dados competentes da sua cidade ou região, ou às autoridades de proteção de dados competentes para a Bosch, isto é:
+            </p>
+
+            <br />
+            <p>
+              Comissão Nacional de Proteção de Dados<br />
+              Av. D. Carlos I, 134 - 1.º <br />
+              1200-651 Lisboa / Portugal <br />
+              Tel: +351 213928400 / Fax: +351 213976832 / e-mail: geral@cnpd.pt<br />
+
+
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Aviso de alteração das medidas de proteção de dados  </b></p>
+            <p>
+              Reservamo-nos o direito de alterar as nossas medidas de segurança e de proteção de dados sempre que seja necessário devido ao
+              desenvolvimento técnico. Nestes casos, também adaptaremos, consoante o caso, as nossas políticas de proteção de dados. Por isso,
+              queira por favor ter em conta as atualizações da política de privacidade.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Contato </b></p>
+
+            <p>
+              Caso deseje contatar-nos, encontra a morada indicada na seção "Responsável".
+              Para exercer os seus direitos mencionados no título “Direitos do utilizador ou afetado” use o seguinte
+              link: <a target="_blank" href="https://request.privacy-bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://request.privacy-bosch.com</span>
+              </a>
+              <br />
+              Para notificar violações de segurança, use o seguinte
+              link:<a target="_blank" href="https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng"
+                      rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng</span>
+              </a>
+              <br />
+              Para saber mais sobre os seus direitos, para sugestões e reclamações relacionadas com o tratamento dos seus dados pessoais, queira por
+              favor dirigir-se ao nosso responsável de proteção de dados do grupo:
+              <br />
+              Data Protection Officer<br />
+              Information Security and Privacy (C/ISP)<br />
+              Robert Bosch GmbH<br />
+              Post office box 30 02 20<br />
+              70 442 Stuttgart, Germany<br />
+              E-mail: <a target="_blank" href="dpo@bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">dpo@bosch.com</span>
+              </a>
+
+            </p>
+
+
+            <p><b class="font-weight-bold">Data efetiva</b></p>
+            <p>1 de setembro de 2021</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="FOSS Licenses" class="font-paragraph">
+          <div id="Foss-Licenses" class="tabcontent Text_Font">
+            <br />
+            <p><b>FOSS Packages & Licenses</b></p>
+            <app-foss-license></app-foss-license>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <!--<hr>-->
+    </div>
+  </div>
+
+  <!--start es-->
+  <div *ngIf="selectedCountry=='spain' && selectedlanguage=='es'">
+    <div class=" col-xs-12 font-paragraph">
+      <mat-tab-group mat-stretch-tabs class="col-xs-12" (selectedTabChange)="tabChangeEventForPO($event)">
+        <mat-tab mat-ink-bar label="Huellas">
+          <div id="Corporateinformation" class="tabcontent Text_Font font-paragraph">
+            <div class="M-Text-Monolith__description">
+              <div class="A-Text-RichText">
+                <br>
+                <br>
+                <p>
+                  <b class="font-weight-bold ">Propietario de la aplicación / Información del departamento</b>
+                </p>
+                <p>
+                  <b class="font-weight-bold">
+                    Jose Luis Rodríguez Crespo / GS/HRS-ES
+                  </b>
+                </p>
+                <p>
+                  GS/HRS-ES
+                  <br />Calle de los Hermanos García Noblejas 19
+                  <br />28037 Madrid
+                  <br />ESPAÑA
+
+
+                </p>
+
+                <p>
+                  Correo electrónico de contacto / Teléfono Correo electrónico:
+
+                  <a target="_blank" href="hrservicees@es.bosch.com" rel="noopener noreferrer">
+                    <span class="A-Link__linkText">hrservicees@es.bosch.com </span>
+                  </a>
+                  <br>Teléfono: +34 91 410 21 11
+                </p>
+
+                <P><b class="font-weight-bold">Información Legal y Corporativa</b></P>
+
+                <p><b class="font-weight-bold">Nombre y dirección</b></p>
+                <p>
+                  Robert Bosch España, S.L.U.
+                  <br /> Calle de los Hermanos García Noblejas, 19
+                  <br />28037 Madrid
+                  <br />ESPAÑA
+
+                </p>
+
+                <p><b class="font-weight-bold">Registrar las entradas</b></p>
+                <p>
+                  Registro Mercantil: de Madrid, Tomo 23.04313749, Folio 219151, Sección 8ª, Hoja número M-224420, Inscripción 119ª.
+                  C.I.F.:B-82203704. S.L.U.
+
+
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Informação legal" class="font-paragraph">
+          <div id="Legalnotice" class="tabcontent Text_Font">
+
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <br>
+                  <br>
+                  <b class="font-weight-bold">Copyright (©)</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+
+                    <p>
+                      Todo el contenido de este sitio web (especialmente texto, imágenes, gráficos, sonido, animaciones y vídeos) y su posicionamiento en los sitios web de Bosch está sujeto a la protección de derechos de autor y a otras leyes de protección. Sin el consentimiento del titular de los derechos respectivos, el contenido de estos sitios web no podrá ser copiado, difundido, modificado o puesto a disposición de terceros con fines comerciales.
+                    </p>
+
+                    <p>
+                      <b class="font-weight-bold">Marcas </b>
+                    </p>
+
+                    <p class="M-Text-Monolith__description A-Text-RichText">
+                      A menos que se indique lo contrario, las marcas utilizadas en nuestros sitios son propiedad intelectual de Robert Bosch GmbH, Alemania.
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold">Registo</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      <br />Sem qualquer outra indicação, os registos de marca usados nos nossos sites são
+                      propriedade intelectual da Robert Bosch GmbH, Alemanha.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold"> Sin licencia </b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      No se concede ninguna licencia para utilizar la propiedad intelectual (en particular las patentes, marcas y derechos de autor) de empresas del Grupo Bosch (Bosch) o de terceros a través de este sitio web.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p>
+                  <b class="font-weight-bold"> Información sobre la resolución de litigios en línea </b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      La Comisión Europea ha creado una plataforma de resolución de litigios en línea (ODR). Esta plataforma tiene por objeto servir de punto de contacto para la resolución extrajudicial de litigios relativos a obligaciones contractuales derivadas de contratos de venta y de servicios en línea.
+                    </p>
+                    <p>
+                      La plataforma está disponible en  <a target="_blank" href="http://ec.europa.eu/consumers/odr/" rel="noopener noreferrer">
+                        <span class="A-Link__linkText">http://ec.europa.eu/consumers/odr/</span>
+                      </a>.
+                    </p>
+                    <p>
+                      Robert Bosch GmbH no participa en procedimientos de resolución de litigios ante organismos de arbitraje de consumidores.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Informação de proteção de dados" class="font-paragraph">
+          <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+            <br>
+            <br>
+
+            <p>
+              <b class="font-weight-bold">
+                Politica de privacidade para a aplicação Bosch SAM
+              </b>
+            </p>
+
+            <p>
+              Neste aviso de proteção de dados, informamos sobre o tratamento dos seus dados pessoais durante a utilização do aplicativo Bosch SAM
+              para a transmissão do certificado de incapacidade para o trabalho ao seu empregador dentro do grupo Bosch.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Bosch respeita a sua privacidade
+              </b>
+            </p>
+
+            <p>
+              A proteção da sua privacidade durante o tratamento de dados pessoais é uma parte fundamental da nossa política corporativa. Os dados pessoais
+              que são obtidos durante a sua visita às nossas ofertas online são tratados de forma confidencial e de acordo com as disposições legais.
+              <br />
+              A proteção de dados e a segurança da informação fazem parte da nossa política empresarial.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Responsável
+              </b>
+            </p>
+
+            <p>
+              A respectiva entidade legal do grupo Bosch com o qual tem um contrato de trabalho é responsável
+              pelo tratamento dos seus dados. Encontrará os dados de contacto desta pessoa jurídica do grupo Bosch no seu contrato de trabalho.
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Obtenção, tratamento e utilização de dados pessoais
+                Os dados pessoais que obtemos através desta oferta online são:
+
+              </b>
+            </p>
+            <p>
+              As seguintes categorias são as principais categorias de dados pessoais tratados:
+            </p>
+
+            <p>
+              •&nbsp;&nbsp;&nbsp;&nbsp;Primeiro nome <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Apelido<br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número pessoal <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Endereço de e-mail (campo opcional) <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número de telemóvel (campo opcional)<br />
+            </p>
+
+            <p>
+              Isto também inclui o tratamento de categorias especiais de dados pessoais, como dados de saúde. Consiste particularmente:
+            </p>
+            <p>- Foto do certificado de incapacidade para o trabalho</p>
+
+            <p>- Detalhes mencionados no certificado de incapacidade para o trabalho</p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                O que são dados pessoais:
+              </b>
+            </p>
+
+            <p>
+              Os dados pessoais consistem em toda a informação relacionada com uma pessoa identificada ou facilmente identificável, por exemplo,
+              nome, morada, número de telemóvel, e-mail, dados contratuais principais, contabilísticos e de pagamento, etc… que de certa forma
+              expressam a identidade da pessoa.<br />
+              Os dados de saúde são dados pessoais, que se relacionam com a saúde física ou mental de uma pessoa singular, incluindo a prestação de serviços
+              de saúde, e que fornecem informações sobre o seu estado de saúde.Obtemos, tratamos e utilizamos dados pessoais (incluindo endereços IP) apenas
+              quando existe uma base legal para tal ou quando o interessado nos tenha comunicado o seu consentimento ao tratamento ou utilização de tais dados
+              pessoais, por exemplo, através de registo.<br />
+
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Finalidade do tratamento e bases legais
+              </b>
+            </p>
+
+            <p>
+              A Bosch e os subcontratantes que tratem dados pessoais por conta da Bosch tratarão os seus dados pessoais com as seguintes finalidades e com base nas seguintes bases legais:
+              O tratamento tem por objetivo transmitir um certificado de incapacidade para o trabalho, que processamos para poder cumprir as nossas obrigações legais, nomeadamente nas áreas do direito do trabalho e da segurança social (base jurídica: obrigação legal).
+              <br />
+              Adicionalmente, tem a opção de introduzir dados de contacto privados para receber notificações do processo (base legal: consentimento).
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Destinatários dos seus dados pessoais dentro de uma entidade jurídica
+              </b>
+            </p>
+            <p>
+              Apenas pessoas e organizações autorizadas (por exemplo, HRL local, GS/HRS-PO) dentro da entidade jurídica do grupo Bosch com o qual
+              tem um contrato de trabalho, receberão os seus dados pessoais para as finalidades de processamento acima referidas. O seu respetivo
+              supervisor será informado do período da sua ausência de acordo com o seu certificado de incapacidade para o trabalho.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência de dados para outros responsáveis </b></p>
+            <p>Os seus dados pessoais apenas serão transferidos a outros responsáveis quando:</p>
+            <ul>
+              <li>For necessário para o cumprimento de um contrato</li>
+              <li>
+                A Bosch ou a outra parte responsável tenham um interesse legítimo na transferência,
+                caso em que tal será indicado na presente política de privacidade,
+              </li>
+              <li>O tiver consentido ou,</li>
+              <li>Nos vejamos obrigados a tal por força de disposição legal ou ordem judicial.</li>
+
+            </ul>
+
+
+            <p>	<b class="font-weight-bold">Prestadores de serviços </b></p>
+            <p>
+              A Bosch pode contratar a empresas de serviços externas tarefas como programação, manutenção e suporte. Estas empresas de serviços são
+              selecionadas cuidadosamente e supervisionadas com regularidade, prestando especial atenção ao nível de segurança e ao uso de medidas
+              e organizativas adequadas à proteção dos dados pessoais que conservam.
+              <br />
+              Exigimos a todas as empresas de serviços com as quais trabalhamos que respeitem a confidencialidade e cumpram as suas obrigações legais.
+              <br />
+              Informamos que, quando nos referimos a empresas de serviços, estas também podem ser outras empresas do Grupo Bosch.
+              <br />
+              Os prestadores de serviços são:
+              <br />
+              Quando o responsável (de acordo com o seu contrato de trabalho) não é a Robert Bosch GmbH a gestão da aplicação foi confiada a:
+              <br />
+              Robert Bosch Engineering and Business solutions Private Limited,
+              <br />
+              123, Ind. Layout, Hosur Road, Koramangala, <br />560095 Bangalore, India. <br />Detalhes do contato: + 91 80665 75757
+            </p>
+            <br />
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência a destinatários fora do Espaço Económico Europeu (EEE) </b></p>
+            <p>
+              Em determinados casos, transferimos dados pessoais a responsáveis cuja sede se encontra fora do Espaço Económico Europeu(EEE),
+              que chamados “países terceiros”, caso em que, previamente à transferência dos dados, assegurar-nos-emos de que o destinatário possui
+              um nível de proteção adequado ou que consentiu a transferência.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Duração do armazenamento dos dados pessoais e períodos de conservação  </b></p>
+
+            <p>
+              Por norma os seus dados serão guardados sempre que seja necessário para o cumprimento da finalidade para a qual foram obtidos e
+              quando tivermos de os manter para cumprir determinadas obrigações legais (por exemplo, em virtude das leis comerciais e fiscais existem
+              determinados documentos, como contratos ou faturas, que somos obrigados a guardar durante o período estabelecido por lei). O período
+              de retenção dos seus dados é de 5 anos.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Utilização das nossas aplicações móveis </b></p>
+            <p>
+              Além das nossas Ofertas Online, oferecemos aplicações móveis ("Apps"), que pode descarregar para o seu dispositivo móvel.
+              Além dos dados recolhidos nos websites, recolhemos dados pessoais adicionais através das nossas apps que resultam especificamente
+              do uso de um dispositivo móvel. Isto está sujeito ao seu consentimento prévio.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Dados tratados pelos operadores da App Store </b></p>
+            <p>
+              Não somos responsáveis e encontra-se fora do âmbito da nossa responsabilidade os casos em que os dados, como o nome do utilizador,
+              o e-mail e os identificadores individuais dos dispositivos são transmitidos a uma app store (por exemplo: Google Play da Google,
+              App store da Apple ou Galaxy Apps store), quando se descarrega a aplicação.
+              A Bosch não possui influência no que diz respeito à recolha e ao tratamento destes dados pessoais pela App Store enquanto responsável.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Plugins sociais </b></p>
+            <p>
+              Nas nossas Ofertas Online utilizamos o plugin “Google ReCaptcha” a fim de assegurar um bom funcionamento da aplicação. <br />
+              Prestador de serviços: Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <br />
+              O plugin é usado para evitar notificações de processos automatizados (por exemplo, robôs) e, portanto, apenas para permitir notificações de pessoas.<br />
+              O plugin transmite informações de hardware e software, dados de dispositivos e aplicações e o resultado da consulta de segurança. <br />
+              Ao utilizar o plugin, o seu navegador de Internet estabelece uma ligação direta aos servidores do fornecedor. Isto fornece ao fornecedor
+              a informação de que o seu navegador de Internet ligou para a página correspondente da nossa Oferta Online, bem como informações de
+              hardware e software, dados do dispositivo e o resultado da consulta de segurança. Os ficheiros de registo (incluindo o endereço IP)
+              são transmitidos do seu navegador de Internet diretamente para um servidor do respetivo fornecedor e guardados no mesmo se necessário.
+              O fornecedor ou o seu servidor podem estar localizados fora da UE ou EEE (por exemplo, nos EUA).<br />
+              Os plugins são extensões independentes dos fornecedores de redes sociais. Por esta razão, a Bosch não tem qualquer controlo sobre
+              os dados pessoais por eles obtidos e armazenados. <br />
+              O propósito e a extensão dos dados obtidos, bem como o tratamento e a utilização dos mesmos pelas redes sociais, bem como os seus
+              direitos e as opções para proteger a sua privacidade podem ser encontrados nas políticas de privacidade de cada rede social. <br />
+
+              Caso não deseje que os fornecedores dessas redes sociais recebam e, se possível, armazenem e utilizem os seus dados, não deverá utilizar os plugins.
+              Protegemo-lo do facto de que a sua visita ao nosso website é gravada e avaliada por fornecedores de plugins por padrão.
+              Quando visita uma página no nosso site que contém esses plugins, estes são inicialmente desativados. Os plugins só são ativados quando
+              clica no botão fornecido.
+
+            </p>
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Segurança  </b></p>
+            <p>
+              Os nossos colaboradores e fornecedores externos que nos prestem serviços estão vinculados a obrigações de confidencialidade e a cumprir
+              as disposições das leis de proteção de dados aplicáveis.<br />
+              A Bosch toma todas as medidas técnicas e organizativas necessárias para assegurar um nível adequado de proteção dos dados que tratamos,
+              especialmente no que diz respeito aos riscos de destruição acidental e ilícita, manipulação, perda, alteração, divulgação ou acessos
+              não autorizados. As medidas de segurança da Bosch são constantemente atualizadas e acompanham solidamente o desenvolvimento tecnológico
+              da empresa.
+              <br />
+              As nossas medidas de segurança são melhoradas constantemente, acompanhando o desenvolvimento tecnológico.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direitos do utilizador ou afetado </b></p>
+            <p>
+              Utilize por favor os dados da secção “Contacto” para fazer valer os seus direitos. Por favor,
+              assegure-se de que nos é possível identificá-lo claramente.
+            </p>
+
+            <p>
+              <b>•	Direito de informação e acesso:</b> assiste-lhe o direito de obter da nossa parte informações relativas ao tratamento dos seus
+              dados pessoais. Para o efeito, poderá exercer o seu direito de acesso aos seus dados pessoais por nós tratados.
+            </p>
+            <p>
+              <b>•	Direito de retificação e apagamento:</b> tem o direito de obter a retificação, sem atrasos indevidos, de dados pessoais inexatos
+              que tratamos e, tendo em conta as finalidades do tratamento, tem também o direito de ter os dados pessoais incompletos, que os mesmos
+              sejam completados. Na medida em que os requisitos legais sejam cumpridos, tem o direito de obter o preenchimento ou eliminação dos
+              seus dados. Isto não se aplica quando os dados são necessários para fins de faturação ou contabilidade ou estão sujeitos a um período
+              de retenção legal. Desde que o acesso a estes dados não seja necessário, pode solicitar a limitação do tratamento dos seus dados
+              pessoais.
+            </p>
+            <p>
+              <b>•	Direito à limitação do tratamento:</b> pode exigir-nos, sempre que se cumpram os requisitos legais estabelecidos, que limitemos o
+              tratamento dos seus dados.
+            </p>
+            <p>
+              <b>•	Direito de portabilidade de dados:</b> o utilizador tem o direito a receber os dados que tenham sido fornecidos à Bosch num formato
+              estruturado, de uso corrente, que permita a leitura pelo computador ou, se for tecnicamente viável, exigir a transferência de tais dados
+              a um terceiro.
+            </p>
+            <p>
+              <b>Retirada do consentimento:</b> sempre que tenha consentido o tratamento dos seus dados, poderá retirar esse consentimento a qualquer
+              momento utilizando seguinte endereço de e-mail:
+              <a target="_blank" href="hrservicept@pt.bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">hrservicept@pt.bosch.com</span>
+              </a> A legalidade do tratamento dos seus dados até à retirada do consentimento não será afetada.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direito de reclamação às autoridades de controlo </b></p>
+            <p>
+              Tem o direito de apresentar reclamações perante as Autoridades competentes. Para tal, pode dirigir-se às autoridades de proteção de
+              dados competentes da sua cidade ou região, ou às autoridades de proteção de dados competentes para a Bosch, isto é:
+            </p>
+
+            <br />
+            <p>
+              Comissão Nacional de Proteção de Dados<br />
+              Av. D. Carlos I, 134 - 1.º <br />
+              1200-651 Lisboa / Portugal <br />
+              Tel: +351 213928400 / Fax: +351 213976832 / e-mail: geral@cnpd.pt<br />
+
+
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Aviso de alteração das medidas de proteção de dados  </b></p>
+            <p>
+              Reservamo-nos o direito de alterar as nossas medidas de segurança e de proteção de dados sempre que seja necessário devido ao
+              desenvolvimento técnico. Nestes casos, também adaptaremos, consoante o caso, as nossas políticas de proteção de dados. Por isso,
+              queira por favor ter em conta as atualizações da política de privacidade.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Contato </b></p>
+
+            <p>
+              Caso deseje contatar-nos, encontra a morada indicada na seção "Responsável".
+              Para exercer os seus direitos mencionados no título “Direitos do utilizador ou afetado” use o seguinte
+              link: <a target="_blank" href="https://request.privacy-bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://request.privacy-bosch.com</span>
+              </a>
+              <br />
+              Para notificar violações de segurança, use o seguinte
+              link:<a target="_blank" href="https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng"
+                      rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng</span>
+              </a>
+              <br />
+              Para saber mais sobre os seus direitos, para sugestões e reclamações relacionadas com o tratamento dos seus dados pessoais, queira por
+              favor dirigir-se ao nosso responsável de proteção de dados do grupo:
+              <br />
+              Data Protection Officer<br />
+              Information Security and Privacy (C/ISP)<br />
+              Robert Bosch GmbH<br />
+              Post office box 30 02 20<br />
+              70 442 Stuttgart, Germany<br />
+              E-mail: <a target="_blank" href="dpo@bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">dpo@bosch.com</span>
+              </a>
+
+            </p>
+
+
+            <p><b class="font-weight-bold">Data efetiva</b></p>
+            <p>1 de setembro de 2021</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="FOSS Licenses" class="font-paragraph">
+          <div id="Foss-Licenses" class="tabcontent Text_Font">
+            <br />
+            <p><b>FOSS Packages & Licenses</b></p>
+            <app-foss-license></app-foss-license>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <!--<hr>-->
+    </div>
+  </div>
+
+  <!--start es-english-->
+  <div *ngIf="selectedCountry=='spain' && selectedlanguage!='es'">
+    <div class=" col-xs-12 font-paragraph">
+      <mat-tab-group mat-stretch-tabs class="col-xs-12" (selectedTabChange)="tabChangeEvent($event)">
+        <mat-tab mat-ink-bar label="Informação Corporativa">
+          <div id="Corporateinformation" class="tabcontent Text_Font font-paragraph">
+            <div class="M-Text-Monolith__description">
+              <div class="A-Text-RichText">
+                <br>
+                <br>
+                <p>
+                  <b class="font-weight-bold ">App Owner / Department Info</b>
+                </p>
+                <p>
+                  <b class="font-weight-bold">
+                    Jose Luis Rodríguez Crespo / GS/HRS-ES
+                  </b>
+                </p>
+                <p>
+                  GS/HRS-ES
+                  <br />Calle de los Hermanos García Noblejas 19
+                  <br />28037 Madrid
+                  <br />ESPAÑA
+
+
+                </p>
+
+                <p>
+                  Contact e-mail address / Phone E-mail:
+                  <a target="_blank" href="hrservicees@es.bosch.com" rel="noopener noreferrer">
+                    <span class="A-Link__linkText">hrservicees@es.bosch.com </span>
+                  </a>
+                  <br>Teléfono: +34 91 410 21 11
+                </p>
+
+                <P><b class="font-weight-bold">Corporate and Legal Info</b></P>
+
+                <p><b class="font-weight-bold">Name and address</b></p>
+                <p>
+                  Robert Bosch España, S.L.U.
+                  <br />Calle de los Hermanos García Noblejas, 19
+                  <br />28037 Madrid
+                  <br />ESPAÑA
+                </p>
+
+                <p><b class="font-weight-bold">Register Entries</b></p>
+                <p>
+                  Registration Court: de Madrid, Tomo 13749, Folio 151, Sección 8ª, Hoja número M-224420,.
+                  C.I.F:B-82203704
+
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Legal notice" class="font-paragraph">
+          <div id="Legalnotice" class="tabcontent Text_Font">
+
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p><b class="font-weight-bold">Copyright (©)</b></p>
+
+
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+
+                    <p>
+                      All the content of this website (especially text, images, graphics, sound, animations and videos) and the positioning thereof in Bosch websites is subject to copyright protection and to other protection laws. Without the consent of the respective rights owner, the content of these websites may not be copied, disseminated, modified or made accessible to third parties for commercial purposes.
+                    </p>
+
+                    <p><b class="font-weight-bold">Marks</b></p>
+                    <p>Unless otherwise indicated, the marks used on our sites are the intellectual property of Robert Bosch GmbH, Germany.</p>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="container col-xs-12">
+              <div class="row">
+                <p>
+                  <b class="font-weight-bold">Trademarks</b>
+                </p>
+                <div class="M-Text-Monolith__description">
+                  <div class="A-Text-RichText">
+                    <p>
+                      Unless otherwise indicated, the trademarks used on our sites are the
+                      intellectual property of Robert Bosch GmbH, Germany.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <div class="container col-xs-12">
+              <div class="row">
+                <p><b class="font-weight-bold">No license </b></p>
+                <p>No license to use the intellectual property (in particular the patents, marks and copyrights) of companies in the Bosch Group (Bosch) or of third parties is granted by way of this website.</p>
+
+              </div>
+            </div>
+            <div class="container col-xs-12">
+              <div class="row">
+
+                <p><b class="font-weight-bold">Information on Online Dispute Resolution  </b></p>
+                <p>The European Commission has set up a platform for Online Dispute Resolution (ODR). This platform is intended to serve as a point of contact for the out-of-court resolution of disputes relating to contractual obligations under online sales contracts and online service contracts.</p>
+                <p>
+                  The platform is provided at http://ec.europa.eu/consumers/odr/.
+                  <br /> Robert Bosch GmbH does not participate in dispute resolution proceedings before consumer arbitration bodies.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+        </mat-tab>
+
+
+        <mat-tab label="Data protection notice" class="font-paragraph">
+          <div id="Dataprotectionnotice" class="tabcontent Text_Font">
+            <br>
+            <br>
+
+            <p>
+              <b class="font-weight-bold">
+                Politica de privacidade para a aplicação Bosch SAM
+              </b>
+            </p>
+
+            <p>
+              Neste aviso de proteção de dados, informamos sobre o tratamento dos seus dados pessoais durante a utilização do aplicativo Bosch SAM
+              para a transmissão do certificado de incapacidade para o trabalho ao seu empregador dentro do grupo Bosch.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Bosch respeita a sua privacidade
+              </b>
+            </p>
+
+            <p>
+              A proteção da sua privacidade durante o tratamento de dados pessoais é uma parte fundamental da nossa política corporativa. Os dados pessoais
+              que são obtidos durante a sua visita às nossas ofertas online são tratados de forma confidencial e de acordo com as disposições legais.
+              <br />
+              A proteção de dados e a segurança da informação fazem parte da nossa política empresarial.
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Responsável
+              </b>
+            </p>
+
+            <p>
+              A respectiva entidade legal do grupo Bosch com o qual tem um contrato de trabalho é responsável
+              pelo tratamento dos seus dados. Encontrará os dados de contacto desta pessoa jurídica do grupo Bosch no seu contrato de trabalho.
+            </p>
+
+            <p>
+              <b class="font-weight-bold">
+                Obtenção, tratamento e utilização de dados pessoais
+                Os dados pessoais que obtemos através desta oferta online são:
+
+              </b>
+            </p>
+            <p>
+              As seguintes categorias são as principais categorias de dados pessoais tratados:
+            </p>
+
+            <p>
+              •&nbsp;&nbsp;&nbsp;&nbsp;Primeiro nome <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Apelido<br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número pessoal <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Endereço de e-mail (campo opcional) <br />
+              •&nbsp;&nbsp;&nbsp;&nbsp;Número de telemóvel (campo opcional)<br />
+            </p>
+
+            <p>
+              Isto também inclui o tratamento de categorias especiais de dados pessoais, como dados de saúde. Consiste particularmente:
+            </p>
+            <p>- Foto do certificado de incapacidade para o trabalho</p>
+
+            <p>- Detalhes mencionados no certificado de incapacidade para o trabalho</p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                O que são dados pessoais:
+              </b>
+            </p>
+
+            <p>
+              Os dados pessoais consistem em toda a informação relacionada com uma pessoa identificada ou facilmente identificável, por exemplo,
+              nome, morada, número de telemóvel, e-mail, dados contratuais principais, contabilísticos e de pagamento, etc… que de certa forma
+              expressam a identidade da pessoa.<br />
+              Os dados de saúde são dados pessoais, que se relacionam com a saúde física ou mental de uma pessoa singular, incluindo a prestação de serviços
+              de saúde, e que fornecem informações sobre o seu estado de saúde.Obtemos, tratamos e utilizamos dados pessoais (incluindo endereços IP) apenas
+              quando existe uma base legal para tal ou quando o interessado nos tenha comunicado o seu consentimento ao tratamento ou utilização de tais dados
+              pessoais, por exemplo, através de registo.<br />
+
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Finalidade do tratamento e bases legais
+              </b>
+            </p>
+
+            <p>
+              A Bosch e os subcontratantes que tratem dados pessoais por conta da Bosch tratarão os seus dados pessoais com as seguintes finalidades e com base nas seguintes bases legais:
+              O tratamento tem por objetivo transmitir um certificado de incapacidade para o trabalho, que processamos para poder cumprir as nossas obrigações legais, nomeadamente nas áreas do direito do trabalho e da segurança social (base jurídica: obrigação legal).
+              <br />
+              Adicionalmente, tem a opção de introduzir dados de contacto privados para receber notificações do processo (base legal: consentimento).
+            </p>
+
+            <br />
+            <p>
+              <b class="font-weight-bold">
+                Destinatários dos seus dados pessoais dentro de uma entidade jurídica
+              </b>
+            </p>
+            <p>
+              Apenas pessoas e organizações autorizadas (por exemplo, HRL local, GS/HRS-PO) dentro da entidade jurídica do grupo Bosch com o qual
+              tem um contrato de trabalho, receberão os seus dados pessoais para as finalidades de processamento acima referidas. O seu respetivo
+              supervisor será informado do período da sua ausência de acordo com o seu certificado de incapacidade para o trabalho.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência de dados para outros responsáveis </b></p>
+            <p>Os seus dados pessoais apenas serão transferidos a outros responsáveis quando:</p>
+            <ul>
+              <li>For necessário para o cumprimento de um contrato</li>
+              <li>
+                A Bosch ou a outra parte responsável tenham um interesse legítimo na transferência,
+                caso em que tal será indicado na presente política de privacidade,
+              </li>
+              <li>O tiver consentido ou,</li>
+              <li>Nos vejamos obrigados a tal por força de disposição legal ou ordem judicial.</li>
+
+            </ul>
+
+
+            <p>	<b class="font-weight-bold">Prestadores de serviços </b></p>
+            <p>
+              A Bosch pode contratar a empresas de serviços externas tarefas como programação, manutenção e suporte. Estas empresas de serviços são
+              selecionadas cuidadosamente e supervisionadas com regularidade, prestando especial atenção ao nível de segurança e ao uso de medidas
+              e organizativas adequadas à proteção dos dados pessoais que conservam.
+              <br />
+              Exigimos a todas as empresas de serviços com as quais trabalhamos que respeitem a confidencialidade e cumpram as suas obrigações legais.
+              <br />
+              Informamos que, quando nos referimos a empresas de serviços, estas também podem ser outras empresas do Grupo Bosch.
+              <br />
+              Os prestadores de serviços são:
+              <br />
+              Quando o responsável (de acordo com o seu contrato de trabalho) não é a Robert Bosch GmbH a gestão da aplicação foi confiada a:
+              <br />
+              Robert Bosch Engineering and Business solutions Private Limited,
+              <br />
+              123, Ind. Layout, Hosur Road, Koramangala, <br />560095 Bangalore, India. <br />Detalhes do contato: + 91 80665 75757
+            </p>
+            <br />
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Transferência a destinatários fora do Espaço Económico Europeu (EEE) </b></p>
+            <p>
+              Em determinados casos, transferimos dados pessoais a responsáveis cuja sede se encontra fora do Espaço Económico Europeu(EEE),
+              que chamados “países terceiros”, caso em que, previamente à transferência dos dados, assegurar-nos-emos de que o destinatário possui
+              um nível de proteção adequado ou que consentiu a transferência.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Duração do armazenamento dos dados pessoais e períodos de conservação  </b></p>
+
+            <p>
+              Por norma os seus dados serão guardados sempre que seja necessário para o cumprimento da finalidade para a qual foram obtidos e
+              quando tivermos de os manter para cumprir determinadas obrigações legais (por exemplo, em virtude das leis comerciais e fiscais existem
+              determinados documentos, como contratos ou faturas, que somos obrigados a guardar durante o período estabelecido por lei). O período
+              de retenção dos seus dados é de 5 anos.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Utilização das nossas aplicações móveis </b></p>
+            <p>
+              Além das nossas Ofertas Online, oferecemos aplicações móveis ("Apps"), que pode descarregar para o seu dispositivo móvel.
+              Além dos dados recolhidos nos websites, recolhemos dados pessoais adicionais através das nossas apps que resultam especificamente
+              do uso de um dispositivo móvel. Isto está sujeito ao seu consentimento prévio.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Dados tratados pelos operadores da App Store </b></p>
+            <p>
+              Não somos responsáveis e encontra-se fora do âmbito da nossa responsabilidade os casos em que os dados, como o nome do utilizador,
+              o e-mail e os identificadores individuais dos dispositivos são transmitidos a uma app store (por exemplo: Google Play da Google,
+              App store da Apple ou Galaxy Apps store), quando se descarrega a aplicação.
+              A Bosch não possui influência no que diz respeito à recolha e ao tratamento destes dados pessoais pela App Store enquanto responsável.
+            </p>
+            <br />
+            <p>	<b class="font-weight-bold">Plugins sociais </b></p>
+            <p>
+              Nas nossas Ofertas Online utilizamos o plugin “Google ReCaptcha” a fim de assegurar um bom funcionamento da aplicação. <br />
+              Prestador de serviços: Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <br />
+              O plugin é usado para evitar notificações de processos automatizados (por exemplo, robôs) e, portanto, apenas para permitir notificações de pessoas.<br />
+              O plugin transmite informações de hardware e software, dados de dispositivos e aplicações e o resultado da consulta de segurança. <br />
+              Ao utilizar o plugin, o seu navegador de Internet estabelece uma ligação direta aos servidores do fornecedor. Isto fornece ao fornecedor
+              a informação de que o seu navegador de Internet ligou para a página correspondente da nossa Oferta Online, bem como informações de
+              hardware e software, dados do dispositivo e o resultado da consulta de segurança. Os ficheiros de registo (incluindo o endereço IP)
+              são transmitidos do seu navegador de Internet diretamente para um servidor do respetivo fornecedor e guardados no mesmo se necessário.
+              O fornecedor ou o seu servidor podem estar localizados fora da UE ou EEE (por exemplo, nos EUA).<br />
+              Os plugins são extensões independentes dos fornecedores de redes sociais. Por esta razão, a Bosch não tem qualquer controlo sobre
+              os dados pessoais por eles obtidos e armazenados. <br />
+              O propósito e a extensão dos dados obtidos, bem como o tratamento e a utilização dos mesmos pelas redes sociais, bem como os seus
+              direitos e as opções para proteger a sua privacidade podem ser encontrados nas políticas de privacidade de cada rede social. <br />
+
+              Caso não deseje que os fornecedores dessas redes sociais recebam e, se possível, armazenem e utilizem os seus dados, não deverá utilizar os plugins.
+              Protegemo-lo do facto de que a sua visita ao nosso website é gravada e avaliada por fornecedores de plugins por padrão.
+              Quando visita uma página no nosso site que contém esses plugins, estes são inicialmente desativados. Os plugins só são ativados quando
+              clica no botão fornecido.
+
+            </p>
+
+
+            <br />
+            <p>	<b class="font-weight-bold">Segurança  </b></p>
+            <p>
+              Os nossos colaboradores e fornecedores externos que nos prestem serviços estão vinculados a obrigações de confidencialidade e a cumprir
+              as disposições das leis de proteção de dados aplicáveis.<br />
+              A Bosch toma todas as medidas técnicas e organizativas necessárias para assegurar um nível adequado de proteção dos dados que tratamos,
+              especialmente no que diz respeito aos riscos de destruição acidental e ilícita, manipulação, perda, alteração, divulgação ou acessos
+              não autorizados. As medidas de segurança da Bosch são constantemente atualizadas e acompanham solidamente o desenvolvimento tecnológico
+              da empresa.
+              <br />
+              As nossas medidas de segurança são melhoradas constantemente, acompanhando o desenvolvimento tecnológico.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direitos do utilizador ou afetado </b></p>
+            <p>
+              Utilize por favor os dados da secção “Contacto” para fazer valer os seus direitos. Por favor,
+              assegure-se de que nos é possível identificá-lo claramente.
+            </p>
+
+            <p>
+              <b>•	Direito de informação e acesso:</b> assiste-lhe o direito de obter da nossa parte informações relativas ao tratamento dos seus
+              dados pessoais. Para o efeito, poderá exercer o seu direito de acesso aos seus dados pessoais por nós tratados.
+            </p>
+            <p>
+              <b>•	Direito de retificação e apagamento:</b> tem o direito de obter a retificação, sem atrasos indevidos, de dados pessoais inexatos
+              que tratamos e, tendo em conta as finalidades do tratamento, tem também o direito de ter os dados pessoais incompletos, que os mesmos
+              sejam completados. Na medida em que os requisitos legais sejam cumpridos, tem o direito de obter o preenchimento ou eliminação dos
+              seus dados. Isto não se aplica quando os dados são necessários para fins de faturação ou contabilidade ou estão sujeitos a um período
+              de retenção legal. Desde que o acesso a estes dados não seja necessário, pode solicitar a limitação do tratamento dos seus dados
+              pessoais.
+            </p>
+            <p>
+              <b>•	Direito à limitação do tratamento:</b> pode exigir-nos, sempre que se cumpram os requisitos legais estabelecidos, que limitemos o
+              tratamento dos seus dados.
+            </p>
+            <p>
+              <b>•	Direito de portabilidade de dados:</b> o utilizador tem o direito a receber os dados que tenham sido fornecidos à Bosch num formato
+              estruturado, de uso corrente, que permita a leitura pelo computador ou, se for tecnicamente viável, exigir a transferência de tais dados
+              a um terceiro.
+            </p>
+            <p>
+              <b>Retirada do consentimento:</b> sempre que tenha consentido o tratamento dos seus dados, poderá retirar esse consentimento a qualquer
+              momento utilizando seguinte endereço de e-mail:
+              <a target="_blank" href="hrservicept@pt.bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">hrservicept@pt.bosch.com</span>
+              </a> A legalidade do tratamento dos seus dados até à retirada do consentimento não será afetada.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Direito de reclamação às autoridades de controlo </b></p>
+            <p>
+              Tem o direito de apresentar reclamações perante as Autoridades competentes. Para tal, pode dirigir-se às autoridades de proteção de
+              dados competentes da sua cidade ou região, ou às autoridades de proteção de dados competentes para a Bosch, isto é:
+            </p>
+
+            <br />
+            <p>
+              Comissão Nacional de Proteção de Dados<br />
+              Av. D. Carlos I, 134 - 1.º <br />
+              1200-651 Lisboa / Portugal <br />
+              Tel: +351 213928400 / Fax: +351 213976832 / e-mail: geral@cnpd.pt<br />
+
+
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Aviso de alteração das medidas de proteção de dados  </b></p>
+            <p>
+              Reservamo-nos o direito de alterar as nossas medidas de segurança e de proteção de dados sempre que seja necessário devido ao
+              desenvolvimento técnico. Nestes casos, também adaptaremos, consoante o caso, as nossas políticas de proteção de dados. Por isso,
+              queira por favor ter em conta as atualizações da política de privacidade.
+            </p>
+
+            <br />
+            <p>	<b class="font-weight-bold">Contato </b></p>
+
+            <p>
+              Caso deseje contatar-nos, encontra a morada indicada na seção "Responsável".
+              Para exercer os seus direitos mencionados no título “Direitos do utilizador ou afetado” use o seguinte
+              link: <a target="_blank" href="https://request.privacy-bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://request.privacy-bosch.com</span>
+              </a>
+              <br />
+              Para notificar violações de segurança, use o seguinte
+              link:<a target="_blank" href="https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng"
+                      rel="noopener noreferrer">
+                <span class="A-Link__linkText">https://www.bkms-system.net/bkwebanon/report/clientInfo?cin=18rbds19&language=eng</span>
+              </a>
+              <br />
+              Para saber mais sobre os seus direitos, para sugestões e reclamações relacionadas com o tratamento dos seus dados pessoais, queira por
+              favor dirigir-se ao nosso responsável de proteção de dados do grupo:
+              <br />
+              Data Protection Officer<br />
+              Information Security and Privacy (C/ISP)<br />
+              Robert Bosch GmbH<br />
+              Post office box 30 02 20<br />
+              70 442 Stuttgart, Germany<br />
+              E-mail: <a target="_blank" href="dpo@bosch.com" rel="noopener noreferrer">
+                <span class="A-Link__linkText">dpo@bosch.com</span>
+              </a>
+
+            </p>
+
+
+            <p><b class="font-weight-bold">Data efetiva</b></p>
+            <p>1 de setembro de 2021</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="FOSS Licenses" class="font-paragraph">
+          <div id="Foss-Licenses" class="tabcontent Text_Font">
+            <br />
+            <p><b>FOSS Packages & Licenses</b></p>
+            <app-foss-license></app-foss-license>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <!--<hr>-->
+    </div>
+  </div>
+</div>

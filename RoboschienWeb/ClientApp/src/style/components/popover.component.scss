@@ -1,0 +1,35 @@
+@import '../imports';
+
+rb-popover {
+  .rb-popover {
+    position: absolute;
+    text-align: left;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    font-size: $base-font-size;
+    z-index: 1050;
+  }
+  .rb-popover-content {
+    background-color: $color-white-paper-white;
+    border: 1px solid $color-gray-alto;
+    min-width: 100px;
+  }
+  .rb-popover-arrow {
+    transform: rotate(45deg);
+    border-left: 1px solid $color-gray-alto;
+    border-top: 1px solid $color-gray-alto;
+    width: 1em;
+    height: 1em;
+    background-color: $color-white-paper-white;
+    position: absolute;
+    top: -0.5em;
+    left: 50%;
+    &.bottom {
+      top: auto;
+      bottom: -0.5em;
+      transform: rotate(225deg);
+    }
+  }
+
+}

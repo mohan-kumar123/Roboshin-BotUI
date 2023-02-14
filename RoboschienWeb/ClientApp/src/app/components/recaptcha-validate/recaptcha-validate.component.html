@@ -1,0 +1,16 @@
+<div class="row mt-5">
+  <div class="col-md-12 mx-auto">
+    <!--<h4 class="text-left">Please check the checkbox</h4>-->
+    <div class="card mt-3">
+      <div class="card-body">
+        <div #recaptcha></div>
+      </div>
+    </div>
+
+    <div mat-dialog-actions fxLayout="row wrap" fxLayoutAlign="center" >
+      <button  #btnClick id="btnClick" mat-raised-button color="primary" mat-button (click)="onClick()"  [style.visibility]="IsShowButton? 'hidden': 'visible'">Ok</button>
+    </div>
+  </div>
+</div>
+
+

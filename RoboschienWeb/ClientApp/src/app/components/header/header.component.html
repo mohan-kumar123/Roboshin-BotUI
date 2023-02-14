@@ -1,0 +1,105 @@
+
+
+
+
+
+<div fxLayout="row wrap" style="background:#fff !important" fxLayoutGap="50%">
+  <div fxLayoutAlign="start center" fxFlex="5 1 auto">
+    <div class="O-Header__logoRow" itemtype="https://schema.org/Brand" itemscope="" itemprop="brand">
+      <div class="container-fluid">
+        <a class="O-Header__brandLogo" aria-label="Logo" href="https://www.bosch.com/" itemprop="url">
+          <figure class="A-Image__figure">
+            <div class="A-Image__preloadWrapper A-Image__preloadWrapper--ratio113to37">
+              <div itemtype="https://schema.org/ImageObject" itemscope="" itemprop="logo">
+                <meta content="/assets/images/bosch_logo_w340.png" itemprop="url">
+                <meta content="100%" itemprop="width">
+                <meta content="100%" itemprop="height">
+              </div>
+              <picture class="A-Image__picture">
+                <img class="A-Image A-Image--preload" alt="Bosch Global" src="/assets/images/{{selectedlanguage}}.png"
+                     data-pfsrc="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              </picture>
+             
+            </div>
+          </figure>
+        </a>
+        
+        <div class="O-Header__meta">
+          <nav class="M-Navigation" aria-label="">
+            <ul class="M-Navigation-Meta" role="menubar">
+              <li class="M-Navigation__item M-Navigation-Meta__item M-Navigation-Meta__selectors">
+                <div class="M-Navigation-Meta__languageSelector">
+
+                  <div *ngIf="urlValue=='/home'">
+                    <div class="M-LanguageSelector" data-js-component="language-selector">
+                      <div class="M-LanguageSelector__dropDownHead">
+                        <!--<div class="M-LanguageSelector__countrySelector M-LanguageSelector__countrySelector--withBorder">
+              <a class="M-Navigation__link M-Navigation-Meta__link" href="/clickdummy/T-CountrySelectPage.html">Deutschland</a>
+            </div>-->
+                        <ul class="M-LanguageSelector__activeLangContainer">
+                          <li class="M-LanguageSelector__language">
+                            <mat-form-field style="border-top:0px;width: 100px;">
+                              <mat-select [(value)]="selectedlanguage" placeholder="" (selectionChange)="onChange($event.value)" name="lang" panelClass="langPanel">
+                                <mat-option selected value="en">
+                                  English
+                                </mat-option>
+
+                                <mat-option value="fr">
+                                  French
+                                </mat-option>
+                                <mat-option value="po">
+                                  Portuguese
+                                </mat-option>
+                                <mat-option value="es">
+                                  Spanish
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+              <li class="M-Navigation__item M-Navigation-Meta__item">
+                <div *ngIf="urlValue=='/home'" style="margin-top:9px;">
+                  <button type="button" (click)="openHelpContent()" style="background: transparent;border: white !important;padding: 1px;" class="btn button-custom">
+                    <img src="/assets/images/help-icon.png" width="20" height="20"  />
+                  </button>
+                </div>
+              </li>
+              <li class="M-Navigation__item M-Navigation-Meta__item">
+                <div *ngIf="urlValue=='/home'" style="margin-top:4px;">
+                  <button  type="button"   class="btn btn-link button-custom font" (click)="onChangeCountry()">
+                    {{'resources.change_country'|translate}}
+                  </button>
+                  </div>
+              </li>
+            </ul>
+          </nav>
+          <div *ngIf="urlValue!='/home'" class="A-Text__brandIdentifier title-margin" itemprop="name">{{'resources.app_name'|translate}}</div>
+          <div *ngIf="urlValue=='/home'" class="A-Text__brandIdentifier" itemprop="name">{{'resources.app_name'|translate}}{{utilityService.selectedCountryCodeStr}}</div>
+        </div>
+
+      </div>
+
+      
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+

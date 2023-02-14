@@ -1,0 +1,99 @@
+
+.M-Container {
+  overflow: scroll;
+  position: absolute;
+  scroll-behavior: auto;
+  height: 75%;
+  padding-left: 1%;
+}
+
+.Text_Font {
+  font-family: sans-serif;
+}
+
+.Header {
+  background: #f1f1f1;
+  width: 100%;
+  text-align: center;
+  height: 75%;
+}
+
+.HeaderRow {
+  padding-top: 5%;
+  height: 60%;
+}
+
+.Home {
+  color: grey;
+}
+
+hr {
+  
+  border-width: 5px;
+  border-color: #005691;
+  margin-top: 3.6%;
+}
+
+
+
+
+@font-face {
+  font-family: 'boschsans_regular';
+  src: url('../../../assets/fonts/boschsans_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'boschsans_light';
+  src: url('../../../assets/fonts/boschsans_light.woff2') format('woff2'), url('../../../assets/fonts/boschsans_light.woff') format('woff');
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  font-family: 'boschsans_regular' !important;
+}
+
+.font {
+  font-family: 'boschsans_regular' !important;
+}
+
+.font-header {
+  font-family: 'boschsans_light',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-size: 24px;
+}
+
+.font-paragraph {
+  font-family: 'boschsans_regular' !important;
+  //font-size: 18px;
+}
+p {
+  font-family: 'boschsans_regular' !important;
+  font-size: 16px;
+}
+
+
+b {
+  font-weight: bold;
+}
+
+::ng-deep .mat-ink-bar {
+  width: 100% !important;
+  height: 5px !important;
+  left: 0px !important;
+} 
+
+::ng-deep .mat-tab-label .mat-tab-label-content {
+  font-family: 'boschsans_regular' !important;
+}
+
+::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+ 
+  color: black !important;
+  opacity: 1;
+}
+
+
+
+/*::ng-deep.mat-tab-link, ::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active {
+  min-width: 200px !important;
+}*/
+

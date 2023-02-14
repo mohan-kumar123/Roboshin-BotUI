@@ -1,0 +1,16 @@
+
+<div mat-dialog-content>
+    <div fxLayout="row wrap"  fxLayoutAlign="center">
+        <mat-spinner></mat-spinner>            
+        <mat-label *ngIf="!responseData.Isocr" style="padding-top:2%;padding-left: 12%;">{{'resources.progress_submit'|translate}}</mat-label>
+        <mat-label *ngIf="responseData.Isocr" style="padding-top:2%;padding-left: 12%;">{{'resources.verifying'|translate}}</mat-label>
+      </div>
+
+    <div *ngIf="responseData.ErrorMessage!=null && !responseData.IsSuccess" style="color: red">
+        {{'resources.network_error'|translate}}
+    </div>
+</div>
+
+<div mat-dialog-actions *ngIf="responseData.IsSuccess || responseData.ErrorMessage!=null">  
+    <button mat-button  cdkFocusInitial (click)="onCloseClick()">{{'resources.close'|translate}}</button>
+  </div>
